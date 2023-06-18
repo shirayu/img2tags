@@ -1,9 +1,11 @@
 [tool.poetry]
 name = "img2tags"
 version = "1.0.0"
-description = ""
+description = "Tag images"
 authors = ["Yuta Hayashibe <yuta@hayashibe.jp>"]
 readme = "README.md"
+homepage = "https://github.com/shirayu/img2tags"
+repository = "https://github.com/shirayu/img2tags"
 packages = [{include = "img2tags"}]
 
 [tool.poetry.dependencies]
