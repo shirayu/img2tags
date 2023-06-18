@@ -10,7 +10,7 @@
 [![Typos](https://github.com/shirayu/img2tags/actions/workflows/typos.yml/badge.svg)](https://github.com/shirayu/img2tags/actions/workflows/typos.yml)
 
 Tag images by using onnxruntime.
-Current default model is the converted ``WD 1.4 MOAT Tagger V2`` which is served in <https://huggingface.co/shirayu/img2tags>.
+The current default model is the converted ``WD 1.4 MOAT Tagger V2`` on <https://huggingface.co/shirayu/img2tags>.
 It works fine for anime images.
 
 ## Setup
@@ -48,4 +48,4 @@ Some codes are based on codes in the following project.
 
 ## References
 
-- [Convert onnx models](https://github.com/onnx/onnx/issues/2182#issuecomment-881752539)
+- [Convert onnx models to change batch size](https://github.com/onnx/onnx/issues/2182#issuecomment-881752539)
