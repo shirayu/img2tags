@@ -219,7 +219,7 @@ def get_opts() -> argparse.Namespace:
         "--model",
         "-m",
         type=str,
-        default="shirayu/img2tags/SmilingWolf__wd-v1-4-moat-tagger-v2",
+        default="shirayu/img2tags/SmilingWolf__wd-v1-4-convnext-tagger-v2",
     )
     parser.add_argument(
         "--batch_size",

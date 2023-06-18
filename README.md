@@ -10,7 +10,7 @@
 [![Typos](https://github.com/shirayu/img2tags/actions/workflows/typos.yml/badge.svg)](https://github.com/shirayu/img2tags/actions/workflows/typos.yml)
 
 Tag images by using onnxruntime.
-The current default model is the converted ``WD 1.4 MOAT Tagger V2`` on <https://huggingface.co/shirayu/img2tags>.
+The current default model is the converted ``WD 1.4 ConvNext Tagger V2`` on <https://huggingface.co/shirayu/img2tags>.
 It works fine for anime images.
 
 ## Setup
@@ -30,13 +30,16 @@ pip install 'img2tags[gpu]'
 img2tags -i input_dir
 
 # Generate .json file in another directory with CPU
-img2tags --model shirayu/img2tags/SmilingWolf__wd-v1-4-moat-tagger-v2 \
+img2tags --model shirayu/img2tags/SmilingWolf__wd-v1-4-convnext-tagger-v2 \
     --batch 4 \
     --ext json \
     --cpu \
     -i input_dir \
     -o output_dir
 ```
+
+The default threshold is used the values stored in ``config.json`` like [this](https://huggingface.co/shirayu/img2tags/blob/main/SmilingWolf__wd-v1-4-moat-tagger-v2/config.json).
+You can set the value in JSON format like ``--th {"0": 0.3, "4":0.2, "9":0.3}``.
 
 ## LICENSE
 
