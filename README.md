@@ -9,6 +9,10 @@
 [![CI](https://github.com/shirayu/img2tags/actions/workflows/ci.yml/badge.svg)](https://github.com/shirayu/img2tags/actions/workflows/ci.yml)
 [![Typos](https://github.com/shirayu/img2tags/actions/workflows/typos.yml/badge.svg)](https://github.com/shirayu/img2tags/actions/workflows/typos.yml)
 
+Tag images by using onnxruntime.
+Current default model is the converted ``WD 1.4 MOAT Tagger V2`` which is served in <https://huggingface.co/shirayu/img2tags>.
+It works fine for anime images.
+
 ## Setup
 
 ```bash
