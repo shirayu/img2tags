@@ -9,7 +9,7 @@
 [![CI](https://github.com/shirayu/img2tags/actions/workflows/ci.yml/badge.svg)](https://github.com/shirayu/img2tags/actions/workflows/ci.yml)
 [![Typos](https://github.com/shirayu/img2tags/actions/workflows/typos.yml/badge.svg)](https://github.com/shirayu/img2tags/actions/workflows/typos.yml)
 
-Tag images by using onnxruntime.
+Tag images by using [ONNX Runtime](https://onnxruntime.ai/).
 The current default model is the converted ``WD 1.4 ConvNext Tagger V2`` on <https://huggingface.co/shirayu/img2tags>.
 It works fine for anime images.
 
