@@ -88,15 +88,15 @@ def run(
         path_out.mkdir(exist_ok=True, parents=True)
 
     path_config: Path
-    session_infer_path = Path(path_or_name_model)
-    if session_infer_path.exists():
-        path_config = session_infer_path.joinpath("config.json")
-        session_infer_path = session_infer_path.joinpath("model.onnx")
+    path_model = Path(path_or_name_model)
+    if path_model.exists():
+        path_config = path_model.joinpath("config.json")
+        path_model = path_model.joinpath("model.onnx")
     else:
         items: list[str] = path_or_name_model.split("/")
         assert len(items) >= 2
         repo_id: str = "/".join(items[:2])
-        session_infer_path = hf_hub_download(
+        path_model = hf_hub_download(
             repo_id=repo_id,
             filename="/".join(items[2:]) + f"/{MODEL_FILE_NAME}",
         )
@@ -113,7 +113,7 @@ def run(
         providers = ["CUDAExecutionProvider"]
 
     model: rt.InferenceSession = rt.InferenceSession(
-        session_infer_path,
+        path_model,
         providers=providers,
     )
 
