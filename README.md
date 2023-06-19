@@ -17,10 +17,10 @@ It works fine for anime images.
 
 ```bash
 # For CPU
-pip install 'img2tags[cpu]'
+pip install -U 'img2tags[cpu]'
 
 # For GPU
-pip install 'img2tags[gpu]'
+pip install -U 'img2tags[gpu]'
 ```
 
 ## Run
