@@ -223,6 +223,8 @@ def get_opts() -> argparse.Namespace:
     )
     parser.add_argument(
         "--batch_size",
+        "--batch",
+        "--bs",
         type=int,
         default=1,
     )
