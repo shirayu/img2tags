@@ -38,8 +38,8 @@ img2tags --model shirayu/img2tags/SmilingWolf__wd-v1-4-convnext-tagger-v2 \
     -o output_dir
 ```
 
-The default threshold is used the values stored in ``config.json`` like [this](https://huggingface.co/shirayu/img2tags/blob/main/SmilingWolf__wd-v1-4-convnext-tagger-v2/config.json).
-You can set the value in JSON format like ``--th {"0": 0.3, "4":0.2, "9":0.3}``.
+The values of default thresholds are stored in ``config.json`` in each model like [this](https://huggingface.co/shirayu/img2tags/blob/main/SmilingWolf__wd-v1-4-convnext-tagger-v2/config.json).
+You can set values in JSON format like ``--th {"0": 0.3, "4":0.2, "9":0.3}``.
 
 ## LICENSE
 
