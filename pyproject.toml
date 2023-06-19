@@ -3,6 +3,7 @@ name = "img2tags"
 version = "1.1.1"
 description = "Tag images"
 authors = ["Yuta Hayashibe <yuta@hayashibe.jp>"]
+license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://github.com/shirayu/img2tags"
 repository = "https://github.com/shirayu/img2tags"
