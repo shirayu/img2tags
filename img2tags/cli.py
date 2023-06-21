@@ -82,11 +82,6 @@ def run(
     assert path_in.exists(), f"Not found: {path_in}"
     assert path_in.is_dir(), f"Not directory: {path_in}"
 
-    if path_out is None:
-        path_out = path_in
-    else:
-        path_out.mkdir(exist_ok=True, parents=True)
-
     path_config: Path
     path_model = Path(path_or_name_model)
     if path_model.exists():
@@ -142,7 +137,12 @@ def run(
                 prob=prob,
                 thresholds=thresholds,
             )
-            with path_out.joinpath(image_path.stem + f".{ext}").open("w") as outf:
+            my_path_out: Path = image_path.parent
+            if path_out is not None:
+                rel: Path = image_path.parent.relative_to(path_in)
+                my_path_out = path_out.joinpath(rel)
+                my_path_out.mkdir(exist_ok=True, parents=True)
+            with my_path_out.joinpath(image_path.stem + f".{ext}").open("w") as outf:
                 if is_json:
                     outf.write(result.json(indent=4, ensure_ascii=False))
                 else:
