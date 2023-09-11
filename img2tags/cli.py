@@ -126,13 +126,13 @@ def run(
     else:
         thresholds = json.loads(threshold_str)
 
-    def run_batch(path_imgs):
-        imgs = np.array([im for _, im in path_imgs])
+    def run_batch(img_pairs):
+        imgs = np.array([im for _, im in img_pairs])
 
         input_name = model.get_inputs()[0].name
         probs = model.run(None, {input_name: imgs})[0]
 
-        for (image_path, _), prob in zip(path_imgs, probs):
+        for (image_path, _), prob in zip(img_pairs, probs):
             result = rconv(
                 prob=prob,
                 thresholds=thresholds,
