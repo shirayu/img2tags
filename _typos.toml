@@ -6,4 +6,4 @@
 [default.extend-words]
 
 [files]
-extend-exclude = ["package-lock.json", "TMP"]
+extend-exclude = ['package*.json', 'node_modules', 'pnpm-lock.yaml', 'TMP']
