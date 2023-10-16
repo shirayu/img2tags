@@ -163,7 +163,7 @@ def run(
 
     thresholds: dict[int, float]
     if threshold_str is None:
-        if is_json:
+        if is_json or is_jsonl:
             thresholds = config.thresholds_for_json
         else:
             thresholds = config.thresholds_for_txt
