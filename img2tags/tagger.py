@@ -70,8 +70,14 @@ class ResultConverter:
         else:
             items: list[str] = path_or_name_model.split("/")
             assert len(items) >= 2
+
+            myfilename: str
+            if len(items) == 2:
+                myfilename = filename
+            else:
+                myfilename = "/".join(items[2:]) + f"/{filename}"
+
             repo_id: str = "/".join(items[:2])
-            myfilename: str = "/".join(items[2:]) + f"/{filename}"
 
             tags_path = Path(
                 hf_hub_download(

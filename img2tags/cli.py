@@ -83,7 +83,7 @@ def run(
     assert path_in.exists(), f"Not found: {path_in}"
     assert path_in.is_dir(), f"Not directory: {path_in}"
 
-    path_config: Path
+    path_config: Optional[Path] = None
     path_model = Path(path_or_name_model)
     if path_model.exists():
         path_config = path_model.joinpath("config.json")
@@ -92,17 +92,48 @@ def run(
         items: list[str] = path_or_name_model.split("/")
         assert len(items) >= 2
         repo_id: str = "/".join(items[:2])
+        if len(items) > 2:
+            # eg: shirayu/img2tags/SmilingWolf__wd-v1-4-convnext-tagger-v2
+            filename = "/".join(items[2:]) + f"/{MODEL_FILE_NAME}"
+
+            path_config = Path(
+                hf_hub_download(
+                    repo_id=repo_id,
+                    filename="/".join(items[2:]) + f"/{CONFIG_FILE_NAME}",
+                )
+            )
+
+        else:
+            # eg: SmilingWolf/wd-v1-4-moat-tagger-v2
+            filename = MODEL_FILE_NAME
+
         path_model = hf_hub_download(
             repo_id=repo_id,
-            filename="/".join(items[2:]) + f"/{MODEL_FILE_NAME}",
+            filename=filename,
         )
-        path_config = Path(
-            hf_hub_download(
-                repo_id=repo_id,
-                filename="/".join(items[2:]) + f"/{CONFIG_FILE_NAME}",
-            )
+
+    config: ImageTaggerConfig
+    if path_config:
+        config = ImageTaggerConfig.parse_file(path_config)
+    else:
+        default_threthold = {
+            "SmilingWolf/wd-v1-4-convnext-tagger-v2": 0.3685,
+            "SmilingWolf/wd-v1-4-convnextv2-tagger-v2": 0.3710,
+            "SmilingWolf/wd-v1-4-moat-tagger-v2": 0.3771,
+        }[path_or_name_model]
+        config = ImageTaggerConfig(
+            image_size=448,
+            thresholds_for_json={
+                0: default_threthold,
+                4: default_threthold,
+                9: 0.0,
+            },
+            thresholds_for_txt={
+                0: default_threthold,
+                4: default_threthold,
+                9: 10000,
+            },
         )
-    config: ImageTaggerConfig = ImageTaggerConfig.parse_file(path_config)
 
     providers: list[str] = ["CPUExecutionProvider"]
     if not force_cpu and "CUDAExecutionProvider" in rt.get_available_providers():
