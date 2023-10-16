@@ -36,6 +36,13 @@ img2tags --ext json \
     -i input_dir \
     -o output_dir \
     --offline
+
+# Output to a single file (JSONL)
+img2tags --ext jsonl \
+    --cpu \
+    -i input_dir \
+    -o output_filename \
+    --offline
 ```
 
 The values of default thresholds are stored in ``config.json`` in each model like [this](https://huggingface.co/shirayu/img2tags/blob/main/SmilingWolf__wd-v1-4-convnext-tagger-v2/config.json).

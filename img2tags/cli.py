@@ -154,6 +154,7 @@ def run(
 
     rconv = ResultConverter(path_or_name_model=path_or_name_model)
     is_json: bool = ext.lower() == "json"
+    is_jsonl: bool = ext.lower() == "jsonl"
 
     thresholds: dict[int, float]
     if threshold_str is None:
@@ -163,6 +164,13 @@ def run(
             thresholds = config.thresholds_for_txt
     else:
         thresholds = json.loads(threshold_str)
+
+    single_outf = None
+    if is_jsonl:
+        if path_out is None:
+            single_outf = Path("/dev/stdout").open("w")
+        else:
+            single_outf = path_out.open("w")
 
     def run_batch(img_pairs):
         imgs = np.array([im for _, im in img_pairs])
@@ -175,11 +183,21 @@ def run(
                 prob=prob,
                 thresholds=thresholds,
             )
+
+            if is_jsonl:
+                assert single_outf is not None
+                d = result.dict()
+                d["input"] = str(image_path)
+                single_outf.write(json.dumps(d, ensure_ascii=False))
+                single_outf.write("\n")
+                continue
+
             my_path_out: Path = image_path.parent
             if path_out is not None:
                 rel: Path = image_path.parent.relative_to(path_in)
                 my_path_out = path_out.joinpath(rel)
                 my_path_out.mkdir(exist_ok=True, parents=True)
+
             with my_path_out.joinpath(image_path.stem + f".{ext}").open("w") as outf:
                 if is_json:
                     outf.write(result.json(indent=4, ensure_ascii=False))
