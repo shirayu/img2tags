@@ -79,6 +79,7 @@ def run(
     threshold_str: Optional[str],
     force_cpu: bool,
 ):
+    assert batch_size == 1, "Currently only batch_size = 1 is supported."
     assert path_in.exists(), f"Not found: {path_in}"
     assert path_in.is_dir(), f"Not directory: {path_in}"
 

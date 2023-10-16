@@ -31,7 +31,6 @@ img2tags -i input_dir
 
 # Generate .json file in another directory with CPU
 img2tags --model shirayu/img2tags/SmilingWolf__wd-v1-4-convnext-tagger-v2 \
-    --batch 4 \
     --ext json \
     --cpu \
     -i input_dir \
