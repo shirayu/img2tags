@@ -30,11 +30,12 @@ pip install -U 'img2tags[gpu]'
 img2tags -i input_dir
 
 # Generate .json file in another directory with CPU
-img2tags --model shirayu/img2tags/SmilingWolf__wd-v1-4-convnext-tagger-v2 \
-    --ext json \
+#   --offline: Do not fetch model files (You must have downloaded that model)
+img2tags --ext json \
     --cpu \
     -i input_dir \
-    -o output_dir
+    -o output_dir \
+    --offline
 ```
 
 The values of default thresholds are stored in ``config.json`` in each model like [this](https://huggingface.co/shirayu/img2tags/blob/main/SmilingWolf__wd-v1-4-convnext-tagger-v2/config.json).

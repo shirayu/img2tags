@@ -2,8 +2,14 @@
 import argparse
 import json
 import logging
+import os
+import sys
 from pathlib import Path
 from typing import Final, Optional
+
+if "--offline" in sys.argv:
+    os.environ["TRANSFORMERS_OFFLINE"] = "1"
+    os.environ["HF_DATASETS_OFFLINE"] = "1"
 
 import numpy as np
 import onnxruntime as rt
@@ -276,6 +282,7 @@ def get_opts() -> argparse.Namespace:
         type=str,
     )
     parser.add_argument("--cpu", action="store_true", help="Force to use CPU")
+    parser.add_argument("--offline", action="store_true", help="Set offline mode")
 
     return parser.parse_args()
 
