@@ -41,7 +41,14 @@ img2tags --ext json \
 img2tags --ext jsonl \
     --cpu \
     -i input_dir \
-    -o output_filename \
+    -o output_filename.jsonl \
+    --offline
+
+# You can use filelist
+img2tags --ext jsonl \
+    --cpu \
+    -i target_file_list.txt \
+    -o output_filename.jsonl \
     --offline
 ```
 

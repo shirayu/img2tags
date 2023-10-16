@@ -87,7 +87,6 @@ def run(
 ):
     assert batch_size == 1, "Currently only batch_size = 1 is supported."
     assert path_in.exists(), f"Not found: {path_in}"
-    assert path_in.is_dir(), f"Not directory: {path_in}"
 
     path_config: Optional[Path] = None
     path_model = Path(path_or_name_model)
@@ -150,7 +149,13 @@ def run(
         providers=providers,
     )
 
-    image_paths = list(glob_images(path_in, "**/*"))
+    image_paths: list[Path] = []
+    if path_in.is_dir():
+        image_paths = list(glob_images(path_in, "**/*"))
+    else:
+        with path_in.open() as inf:
+            for line in inf:
+                image_paths.append(Path(line[:-1]))
 
     rconv = ResultConverter(path_or_name_model=path_or_name_model)
     is_json: bool = ext.lower() == "json"
