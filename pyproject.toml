@@ -13,7 +13,7 @@ packages = [{include = "img2tags"}]
 python = ">=3.9,<3.11"
 opencv-python = "^4.7.0.72"
 numpy = "^1.24.3"
-torch = "=2.0.0" # https://github.com/pytorch/pytorch/issues/100974
+torch = ">=2.1.0"
 huggingface-hub = "^0.15.1"
 tqdm = "^4.65.0"
 pillow = "^9.5.0"
