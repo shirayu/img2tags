@@ -21,6 +21,9 @@ pip install -U 'img2tags[cpu]'
 
 # For GPU
 pip install -U 'img2tags[gpu]'
+
+# If you use CUDA 12.2, the following packages may be needed
+sudo apt install libcufft10 libcudart11.0
 ```
 
 ## Run
