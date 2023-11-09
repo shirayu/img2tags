@@ -40,8 +40,11 @@ class ImageTagger:
         pad_y = size - _image.shape[0]
         pad_l = pad_x // 2
         pad_t = pad_y // 2
-        _image = np.pad(
-            _image, ((pad_t, pad_y - pad_t), (pad_l, pad_x - pad_l), (0, 0)), mode="constant", constant_values=255
+        _image = np.pad(  # type: ignore
+            _image,
+            ((pad_t, pad_y - pad_t), (pad_l, pad_x - pad_l), (0, 0)),  # type: ignore
+            mode="constant",
+            constant_values=255,
         )
 
         interp = cv2.INTER_AREA if size > image_size else cv2.INTER_LANCZOS4
