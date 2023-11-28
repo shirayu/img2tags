@@ -16,11 +16,12 @@ import onnxruntime as rt
 import torch
 import torch.utils.data
 from huggingface_hub import hf_hub_download
-from PIL import Image
+from PIL import Image, ImageFile
 from tqdm import tqdm
 
 from img2tags.tagger import ImageTagger, ImageTaggerConfig, ResultConverter
 
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 logger = logging.getLogger(__name__)
 
 
