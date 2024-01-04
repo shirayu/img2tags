@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import collections.abc
 import json
 import logging
 import os
@@ -11,13 +12,23 @@ if "--offline" in sys.argv:
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
     os.environ["HF_DATASETS_OFFLINE"] = "1"
 
+from typing import Iterable, Sequence, Union
+
 import numpy as np
 import onnxruntime as rt
 import torch
 import torch.utils.data
 from huggingface_hub import hf_hub_download
 from PIL import Image, ImageFile
-from tqdm import tqdm
+from rich.progress import (
+    BarColumn,
+    MofNCompleteColumn,
+    Progress,
+    ProgressType,
+    TextColumn,
+    TimeElapsedColumn,
+    TimeRemainingColumn,
+)
 
 from img2tags.tagger import ImageTagger, ImageTaggerConfig, ResultConverter
 
@@ -73,6 +84,36 @@ def glob_images(path_target: Path, exp: str):
 
 MODEL_FILE_NAME: Final[str] = "model.onnx"
 CONFIG_FILE_NAME: Final[str] = "config.json"
+
+
+def track(
+    sequence: Union[Sequence[ProgressType], Iterable[ProgressType]],
+    *,
+    prefix: Optional[str] = None,
+    total: Optional[int] = None,
+) -> Iterable[ProgressType]:
+    cols = []
+    if prefix is not None:
+        cols.append(TextColumn(prefix))
+    cols += [
+        BarColumn(),
+        MofNCompleteColumn(),
+        TextColumn("•"),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        TextColumn("•"),
+        TimeElapsedColumn(),
+        TextColumn("•"),
+        TimeRemainingColumn(),
+    ]
+    progress = Progress(*cols)
+    if total is None and isinstance(sequence, collections.abc.Sequence):
+        total = len(sequence)
+    with progress:
+        yield from progress.track(
+            sequence,
+            description="",
+            total=total,
+        )
 
 
 def run(
@@ -232,7 +273,7 @@ def run(
     )
 
     b_imgs = []
-    for data_entry in tqdm(data, smoothing=0.0):
+    for data_entry in track(data):
         for data in data_entry:
             if data is None:
                 continue
