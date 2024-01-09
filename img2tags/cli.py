@@ -51,12 +51,16 @@ class ImageLoadingPrepDataset(torch.utils.data.Dataset):
     def __getitem__(self, idx):
         img_path = self.images[idx]
 
-        image = Image.open(img_path).convert("RGB")
-        image = ImageTagger.preprocess(
-            image=image,
-            image_size=self.image_size,
-        )
-        tensor = torch.tensor(image)
+        try:
+            image = Image.open(img_path).convert("RGB")
+            image = ImageTagger.preprocess(
+                image=image,
+                image_size=self.image_size,
+            )
+            tensor = torch.tensor(image)
+        except Exception as e:
+            logger.warning(f"Load error: {img_path}, error: {e}")
+            return (None, img_path)
         return (tensor, img_path)
 
 
