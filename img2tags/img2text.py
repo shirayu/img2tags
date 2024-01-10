@@ -228,28 +228,15 @@ class Captioner:
             )
 
 
-def operation(
-    *,
-    path_in: Path,
-    path_out: Path,
-    model_name: str,
-    dtype: str,
-    batch_size: int,
-    path_query: Path,
-    path_config: Path,
-    disable_dynamic_config: bool,
-    with_progress_bar: bool,
-) -> None:
-    cpt: Captioner = Captioner(
-        model_name=model_name,
-        dtype=dtype,
-        path_query=path_query,
-        path_config=path_config,
-        batch_size=batch_size,
-        disable_dynamic_config=disable_dynamic_config,
-    )
+def iter_input(path_in: Path):
+    if path_in.is_dir():
+        files: list[Path] = [v for v in path_in.iterdir()]
+        for v in track(files):
+            yield v
+        return
 
-    with path_in.open() as inf, path_out.open("w") as outf:
+    with_progress_bar: bool = bool(PATH_STDIN != path_in)
+    with path_in.open() as inf:
         if with_progress_bar:
             itr = track(inf)
         else:
@@ -262,8 +249,32 @@ def operation(
             if line.startswith("'") and line.endswith("' "):
                 line = line[1:-2]
             file_url: Path = Path(line).expanduser()
-            cpt.add_task(target=file_url)
+            yield file_url
 
+
+def operation(
+    *,
+    path_in: Path,
+    path_out: Path,
+    model_name: str,
+    dtype: str,
+    batch_size: int,
+    path_query: Path,
+    path_config: Path,
+    disable_dynamic_config: bool,
+) -> None:
+    cpt: Captioner = Captioner(
+        model_name=model_name,
+        dtype=dtype,
+        path_query=path_query,
+        path_config=path_config,
+        batch_size=batch_size,
+        disable_dynamic_config=disable_dynamic_config,
+    )
+
+    with path_out.open("w") as outf:
+        for file_url in iter_input(path_in):
+            cpt.add_task(target=file_url)
             for d in cpt.run():
                 outf.write(json.dumps(d, ensure_ascii=False))
                 outf.write("\n")
@@ -329,7 +340,6 @@ def main() -> None:
         path_query=opts.query,
         path_config=opts.config,
         disable_dynamic_config=opts.disable_dynamic_config,
-        with_progress_bar=bool(PATH_STDIN != opts.input),
     )
 
 
