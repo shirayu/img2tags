@@ -25,7 +25,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
       - run: pip install poetry
-      - run: poetry install -E cpu
+      - run: poetry install -E cpu -E text
       - run: >-
           poetry run make lint_python -j $(nproc)
 
