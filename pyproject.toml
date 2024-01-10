@@ -45,7 +45,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-img2tags = "img2tags.cli:main"
+img2tags = "img2tags.img2tags:main"
 img2text = "img2tags.img2text:main"
 
 [tool.pyright]
