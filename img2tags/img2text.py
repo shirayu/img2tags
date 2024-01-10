@@ -1,31 +1,28 @@
 #!/usr/bin/env python3
 import argparse
 import json
-import logging
 import os
 import sys
 from collections import deque  # not thread-safe
 from pathlib import Path
 from typing import Iterator, Optional
 
+from img2tags.common import track
+
 if "--online" not in sys.argv:
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
     os.environ["HF_DATASETS_OFFLINE"] = "1"
 
 import torch
-from PIL import Image
-from transformers import (  # GenerationConfig
-    BatchFeature,
-    BitsAndBytesConfig,
-    Blip2ForConditionalGeneration,
-    Blip2Processor,
-)
+from PIL import Image, ImageFile
+from transformers import BatchFeature, BitsAndBytesConfig, Blip2ForConditionalGeneration, Blip2Processor
 
 SUPPORTED_DTYPES: list[str] = [
     "bf16",
     "nf4",
 ]
-logger = logging.getLogger(__name__)
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+PATH_STDIN: Path = Path("/dev/stdin")
 
 
 class Captioner:
@@ -241,6 +238,7 @@ def operation(
     path_query: Path,
     path_config: Path,
     disable_dynamic_config: bool,
+    with_progress_bar: bool,
 ) -> None:
     cpt: Captioner = Captioner(
         model_name=model_name,
@@ -251,9 +249,13 @@ def operation(
         disable_dynamic_config=disable_dynamic_config,
     )
 
-    logger.info("Ready.")
     with path_in.open() as inf, path_out.open("w") as outf:
-        for line in inf:
+        if with_progress_bar:
+            itr = track(inf)
+        else:
+            itr = inf
+
+        for line in itr:
             line = line[:-1]
             if len(line) == 0:
                 continue
@@ -274,7 +276,7 @@ def operation(
 
 def get_opts() -> argparse.Namespace:
     oparser = argparse.ArgumentParser()
-    oparser.add_argument("--input", "-i", type=Path, default="/dev/stdin", required=False)
+    oparser.add_argument("--input", "-i", type=Path, default=PATH_STDIN, required=False)
     oparser.add_argument("--output", "-o", type=Path, default="/dev/stdout", required=False)
     oparser.add_argument(
         "--model",
@@ -312,7 +314,6 @@ def get_opts() -> argparse.Namespace:
 
 
 def main() -> None:
-    logging.basicConfig(level=logging.INFO)
     opts = get_opts()
 
     model: str = "Salesforce/blip2-opt-6.7b-coco"
@@ -328,6 +329,7 @@ def main() -> None:
         path_query=opts.query,
         path_config=opts.config,
         disable_dynamic_config=opts.disable_dynamic_config,
+        with_progress_bar=bool(PATH_STDIN != opts.input),
     )
 
 
