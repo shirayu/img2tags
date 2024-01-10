@@ -8,6 +8,8 @@ import sys
 from pathlib import Path
 from typing import Final, Optional
 
+from rich.console import Console
+
 if "--offline" in sys.argv:
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
     os.environ["HF_DATASETS_OFFLINE"] = "1"
@@ -109,7 +111,10 @@ def track(
         TextColumn("•"),
         TimeRemainingColumn(),
     ]
-    progress = Progress(*cols)
+    progress = Progress(
+        *cols,
+        console=Console(file=sys.stderr),
+    )
     if total is None and isinstance(sequence, collections.abc.Sequence):
         total = len(sequence)
     with progress:
