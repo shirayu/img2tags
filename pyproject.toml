@@ -14,18 +14,22 @@ python = ">=3.9,<3.12"
 opencv-python = "^4.7.0.72"
 numpy = "^1.24.3"
 torch = ">=2.1.0"
-huggingface-hub = "^0.15.1"
+huggingface-hub = ">=0.15.1"
 pillow = "^9.5.0"
 onnxruntime = { version = "^1.16.1", optional = true }
 onnxruntime-gpu = { version = "^1.16.1", optional = true }
 onnx = {version="^1.14.0", optional = true }
 pydantic = "^1.10.9"
 rich = "^13.7.0"
+accelerate = {version = ">=0.22.0", optional = true}
+transformers = {version = ">=4.34.0", optional = true}
+bitsandbytes = {version = ">=0.41.1", optional = true}
 
 [tool.poetry.extras]
 convert = ["onnx"]
 cpu = ["onnxruntime"]
 gpu = ["onnxruntime-gpu"]
+text = ["transformers", "bitsandbytes", "accelerate"]
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
@@ -41,7 +45,8 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-img2tags = "img2tags.cli:main"
+img2tags = "img2tags.img2tags:main"
+img2text = "img2tags.img2text:main"
 
 [tool.pyright]
 pythonVersion = "3.9"
