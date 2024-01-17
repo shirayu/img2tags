@@ -28,12 +28,8 @@ def operation(
 
 def get_opts() -> argparse.Namespace:
     oparser = argparse.ArgumentParser()
-    oparser.add_argument(
-        "--input", "-i", type=Path, default="/dev/stdin", required=False
-    )
-    oparser.add_argument(
-        "--output", "-o", type=Path, default="/dev/stdout", required=False
-    )
+    oparser.add_argument("--input", "-i", type=Path, default="/dev/stdin", required=False)
+    oparser.add_argument("--output", "-o", type=Path, default="/dev/stdout", required=False)
     return oparser.parse_args()
 
 

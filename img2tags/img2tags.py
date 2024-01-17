@@ -189,7 +189,7 @@ def run(
         input_name = model.get_inputs()[0].name
         probs = model.run(None, {input_name: imgs})[0]
 
-        for (image_path, _), prob in zip(img_pairs, probs):
+        for (image_path, _), prob in zip(img_pairs, probs, strict=True):  # type: ignore
             result = rconv(
                 prob=prob,
                 thresholds=thresholds,

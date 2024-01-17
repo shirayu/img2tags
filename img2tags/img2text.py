@@ -174,7 +174,7 @@ class Captioner:
             ]
 
             if self.qs is None:
-                for name, text in zip(names, texts):
+                for name, text in zip(names, texts, strict=True):  # type: ignore
                     yield {"input": name, "result": [text]}
                 return
 
