@@ -4,8 +4,9 @@ import json
 import os
 import sys
 from collections import deque  # not thread-safe
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator, Optional
+from typing import Optional
 
 from img2tags.common import track
 
@@ -183,8 +184,7 @@ class Captioner:
             for i, v in enumerate(texts):
                 rets[i % myunit]["result"].append(v)
 
-            for ret in rets:
-                yield ret
+            yield from rets
 
     def finish_queue(self) -> Iterator[dict]:
         yield from self.run(unit=len(self.image_queue))
@@ -231,8 +231,7 @@ class Captioner:
 def iter_input(path_in: Path):
     if path_in.is_dir():
         files: list[Path] = [v for v in path_in.iterdir()]
-        for v in track(files):
-            yield v
+        yield from track(files)
         return
 
     with_progress_bar: bool = bool(PATH_STDIN != path_in)

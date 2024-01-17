@@ -3,7 +3,8 @@
 
 import collections.abc
 import sys
-from typing import Iterable, Optional, Sequence, Union
+from collections.abc import Iterable, Sequence
+from typing import Optional, Union
 
 from rich.console import Console
 from rich.progress import (
