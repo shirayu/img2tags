@@ -19,9 +19,10 @@ import torch.utils.data
 from huggingface_hub import hf_hub_download
 from PIL import Image, ImageFile
 
-from img2tags.common import track
+from img2tags.common import setup_logging, track
 from img2tags.tagger import ImageTagger, ImageTaggerConfig, ResultConverter
 
+setup_logging()
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 logger = logging.getLogger(__name__)
 

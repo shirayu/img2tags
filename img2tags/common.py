@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-
-
 import collections.abc
+import logging
 import sys
 from collections.abc import Iterable, Sequence
 from typing import Optional, Union
@@ -49,3 +48,22 @@ def track(
             description="",
             total=total,
         )
+
+
+def setup_logging(log_level=logging.INFO):
+    if logging.root.handlers:  # Already configured
+        return
+    try:
+        from rich.logging import RichHandler
+
+        handler = RichHandler()
+    except ImportError:
+        handler = logging.StreamHandler()
+
+    formatter = logging.Formatter(
+        fmt="%(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    handler.setFormatter(formatter)
+    logging.root.setLevel(log_level)
+    logging.root.addHandler(handler)
