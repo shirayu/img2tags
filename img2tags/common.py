@@ -6,6 +6,7 @@ from collections.abc import Iterable, Sequence
 from typing import Optional, Union
 
 from rich.console import Console
+from rich.logging import RichHandler
 from rich.progress import (
     BarColumn,
     MofNCompleteColumn,
@@ -53,15 +54,10 @@ def track(
 def setup_logging(log_level=logging.INFO):
     if logging.root.handlers:  # Already configured
         return
-    try:
-        from rich.logging import RichHandler
-
-        handler = RichHandler()
-    except ImportError:
-        handler = logging.StreamHandler()
+    handler = RichHandler()
 
     formatter = logging.Formatter(
-        fmt="%(asctime)s %(levelname)s [%(name)s] %(message)s",
+        fmt="%(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     handler.setFormatter(formatter)
