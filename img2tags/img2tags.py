@@ -126,7 +126,8 @@ def run(
 
     config: ImageTaggerConfig
     if path_config:
-        config = ImageTaggerConfig.parse_file(path_config)
+        with path_config.open() as inf:
+            config = ImageTaggerConfig.model_validate_strings(inf.read())
     else:
         default_threthold = {
             "SmilingWolf/wd-v1-4-convnext-tagger-v2": 0.3685,
@@ -198,7 +199,7 @@ def run(
 
             if is_jsonl:
                 assert single_outf is not None
-                d = result.dict()
+                d = result.model_dump()
                 d["input"] = str(image_path)
                 single_outf.write(json.dumps(d, ensure_ascii=False))
                 single_outf.write("\n")
@@ -212,7 +213,7 @@ def run(
 
             with my_path_out.joinpath(image_path.stem + f".{ext}").open("w") as outf:
                 if is_json:
-                    outf.write(result.json(indent=4, ensure_ascii=False))
+                    outf.write(json.dumps(result.model_dump(), indent=4, ensure_ascii=False))
                 else:
                     kvs: list[tuple[str, float]] = []
                     outs: list[str] = []
