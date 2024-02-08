@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import collections.abc
 import logging
-import sys
 from collections.abc import Iterable, Sequence
 from typing import Optional, Union
 
@@ -39,7 +38,7 @@ def track(
     ]
     progress = Progress(
         *cols,
-        console=Console(file=sys.stderr),
+        console=Console(stderr=True),
     )
     if total is None and isinstance(sequence, collections.abc.Sequence):
         total = len(sequence)
@@ -54,7 +53,7 @@ def track(
 def setup_logging(log_level=logging.INFO):
     if logging.root.handlers:  # Already configured
         return
-    handler = RichHandler()
+    handler = RichHandler(console=Console(stderr=True))
 
     formatter = logging.Formatter(
         fmt="%(message)s",
