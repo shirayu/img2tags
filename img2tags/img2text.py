@@ -27,6 +27,8 @@ PATH_STDIN: Path = Path("/dev/stdin")
 
 
 class Captioner:
+    processor: Blip2Processor
+
     def __init__(
         self,
         *,
@@ -63,7 +65,7 @@ class Captioner:
                 device_map="auto",
             )
 
-        self.processor = Blip2Processor.from_pretrained(model_name)
+        self.processor = Blip2Processor.from_pretrained(model_name)  # type: ignore
 
         if path_config is None:
             self.config = {
