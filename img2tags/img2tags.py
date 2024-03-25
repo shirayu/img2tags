@@ -153,7 +153,10 @@ def run(
 
     providers: list[str] = ["CPUExecutionProvider"]
     if not force_cpu and "CUDAExecutionProvider" in rt.get_available_providers():
-        providers = ["CUDAExecutionProvider"]
+        providers = [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider",
+        ]
 
     model: rt.InferenceSession = rt.InferenceSession(
         path_model,
