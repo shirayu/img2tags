@@ -16,6 +16,8 @@ from rich.progress import (
     TimeRemainingColumn,
 )
 
+CONSOLE: Console = Console(stderr=True)
+
 
 def track(
     sequence: Union[Sequence[ProgressType], Iterable[ProgressType]],
@@ -38,7 +40,7 @@ def track(
     ]
     progress = Progress(
         *cols,
-        console=Console(stderr=True),
+        console=CONSOLE,
     )
     if total is None and isinstance(sequence, collections.abc.Sequence):
         total = len(sequence)
@@ -53,7 +55,7 @@ def track(
 def setup_logging(log_level=logging.INFO):
     if logging.root.handlers:  # Already configured
         return
-    handler = RichHandler(console=Console(stderr=True))
+    handler = RichHandler(console=CONSOLE)
 
     formatter = logging.Formatter(
         fmt="%(message)s",
