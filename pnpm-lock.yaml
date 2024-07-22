@@ -15,8 +15,8 @@ importers:
         specifier: ^0.41.0
         version: 0.41.0
       pyright:
-        specifier: ^1.1.371
-        version: 1.1.371
+        specifier: ^1.1.372
+        version: 1.1.372
 
 packages:
 
@@ -117,9 +117,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  jackspeak@3.4.2:
-    resolution: {integrity: sha512-qH3nOSj8q/8+Eg8LUPOq3C+6HWkpUioIjDsq1+D4zY91oZvpPttw8GwtF1nReRYKXl+1AORyFqtm2f5Q1SB6/Q==}
-    engines: {node: 14 >=14.21 || 16 >=16.20 || >=18}
+  jackspeak@3.4.3:
+    resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
 
   js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -184,8 +183,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  pyright@1.1.371:
-    resolution: {integrity: sha512-HNJJsSXeSI73Pcz4yOlRsoMSAUPH35GSZZJc53KF8EAsCG6snE4vfL7itEcnUN+ri0+7H3UZAK0xSjq0VXk7cQ==}
+  pyright@1.1.372:
+    resolution: {integrity: sha512-S0XYmTQWK+ha9FTIWviNk91UnbD569wPUCNEltSqtHeTJhbHj5z3LkOKiqXAOvn72BBfylcgpQqyQHsocmQtiQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -314,7 +313,7 @@ snapshots:
   glob@10.4.5:
     dependencies:
       foreground-child: 3.2.1
-      jackspeak: 3.4.2
+      jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
       package-json-from-dist: 1.0.0
@@ -328,7 +327,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jackspeak@3.4.2:
+  jackspeak@3.4.3:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
@@ -399,7 +398,7 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  pyright@1.1.371:
+  pyright@1.1.372:
     optionalDependencies:
       fsevents: 2.3.3
 
