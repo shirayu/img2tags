@@ -86,9 +86,6 @@ MODELS_ONLY_BS1: Final[set[str]] = {
     "SmilingWolf/wd-v1-4-convnext-tagger-v2",
     "SmilingWolf/wd-v1-4-convnextv2-tagger-v2",
     "SmilingWolf/wd-v1-4-moat-tagger-v2",
-    "SmilingWolf/wd-vit-tagger-v3",
-    "SmilingWolf/wd-swinv2-tagger-v3",
-    "SmilingWolf/wd-convnext-tagger-v3",
 }
 
 
