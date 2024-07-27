@@ -81,6 +81,16 @@ MODEL_FILE_NAME: Final[str] = "model.onnx"
 CONFIG_FILE_NAME: Final[str] = "config.json"
 
 
+MODELS_ONLY_BS1: Final[set[str]] = {
+    "SmilingWolf/wd-v1-4-convnext-tagger-v2",
+    "SmilingWolf/wd-v1-4-convnextv2-tagger-v2",
+    "SmilingWolf/wd-v1-4-moat-tagger-v2",
+    "SmilingWolf/wd-vit-tagger-v3",
+    "SmilingWolf/wd-swinv2-tagger-v3",
+    "SmilingWolf/wd-convnext-tagger-v3",
+}
+
+
 def run(
     *,
     path_or_name_model: str,
@@ -92,7 +102,8 @@ def run(
     threshold_str: Optional[str],
     force_cpu: bool,
 ):
-    assert batch_size == 1, "Currently only batch_size = 1 is supported."
+    if path_or_name_model in MODELS_ONLY_BS1:
+        assert batch_size == 1, f"Only batch_size = 1 is supported for {path_or_name_model}"
     assert path_in.exists(), f"Not found: {path_in}"
 
     path_config: Optional[Path] = None
