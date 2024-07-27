@@ -68,6 +68,7 @@ IMAGE_EXTENSIONS = {
     ".jpeg",
     ".webp",
     ".bmp",
+    ".avif",
 }
 
 
