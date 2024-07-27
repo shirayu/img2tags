@@ -136,6 +136,7 @@ def run(
             "SmilingWolf/wd-vit-tagger-v3": 0.2547,  # F1 = 0.4278
             "SmilingWolf/wd-swinv2-tagger-v3": 0.2521,  # F1 = 0.4411
             "SmilingWolf/wd-convnext-tagger-v3": 0.2570,  # F1 = 0.4282
+            "SmilingWolf/wd-vit-large-tagger-v3": 0.2606,  # F1 = 0.4674
         }[path_or_name_model]
         config = ImageTaggerConfig(
             image_size=448,
@@ -294,7 +295,7 @@ def get_opts() -> argparse.Namespace:
         "--model",
         "-m",
         type=str,
-        default="SmilingWolf/wd-swinv2-tagger-v3",
+        default="SmilingWolf/wd-vit-large-tagger-v3",
     )
     parser.add_argument(
         "--batch_size",
