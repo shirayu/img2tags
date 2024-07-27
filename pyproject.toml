@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "img2tags"
-version = "1.5.1"
+version = "1.6.0"
 description = "Tag images"
 authors = ["Yuta Hayashibe <yuta@hayashibe.jp>"]
 license = "Apache-2.0"
