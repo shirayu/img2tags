@@ -1,15 +1,22 @@
 ---
 name: CI
-"on": push
+on:  # yamllint disable-line rule:truthy
+  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install Poetry Action
         uses: snok/install-poetry@v1.4.1
@@ -26,15 +33,13 @@ jobs:
 
       - run: pip install poetry
       - run: poetry install -E cpu -E text
-      - run: >-
-          poetry run make lint_python -j $(nproc)
 
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v4.0.0
         with:
           version: 9
           run_install: false
@@ -55,4 +60,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - run: poetry run make lint_node -j $(nproc)
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+
+      - run: poetry run task -p all_for_ci
