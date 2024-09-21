@@ -2,7 +2,6 @@
 import collections.abc
 import logging
 from collections.abc import Iterable, Sequence
-from typing import Optional, Union
 
 from rich.console import Console
 from rich.logging import RichHandler
@@ -20,10 +19,10 @@ CONSOLE: Console = Console(stderr=True)
 
 
 def track(
-    sequence: Union[Sequence[ProgressType], Iterable[ProgressType]],
+    sequence: Sequence[ProgressType] | Iterable[ProgressType],
     *,
-    prefix: Optional[str] = None,
-    total: Optional[int] = None,
+    prefix: str | None = None,
+    total: int | None = None,
 ) -> Iterable[ProgressType]:
     cols = []
     if prefix is not None:

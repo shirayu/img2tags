@@ -6,7 +6,6 @@ import sys
 from collections import deque  # not thread-safe
 from collections.abc import Iterator
 from pathlib import Path
-from typing import Optional
 
 from img2tags.common import track
 
@@ -34,8 +33,8 @@ class Captioner:
         *,
         model_name: str,
         dtype: str,
-        path_query: Optional[Path],
-        path_config: Optional[Path],
+        path_query: Path | None,
+        path_config: Path | None,
         batch_size: int,
         disable_dynamic_config: bool,
     ):
@@ -117,7 +116,7 @@ class Captioner:
     def run(
         self,
         *,
-        unit: Optional[int] = None,
+        unit: int | None = None,
     ) -> Iterator[dict]:
         myunit: int = self.batch_size if unit is None else unit
         while len(self.image_queue) >= myunit:
