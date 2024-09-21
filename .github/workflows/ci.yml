@@ -14,25 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v3
         with:
-          python-version: '3.12'
-
-      - name: Install Poetry Action
-        uses: snok/install-poetry@v1.4.1
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-      - run: pip install poetry
-      - run: poetry install -E cpu -E text
+          enable-cache: true
+      - run: uv sync --extra gpu --extra text
 
       - uses: actions/setup-node@v4
         with:
@@ -65,4 +51,4 @@ jobs:
         with:
           version: 3.x
 
-      - run: poetry run task -p all_for_ci
+      - run: uv run task -p all_for_ci
