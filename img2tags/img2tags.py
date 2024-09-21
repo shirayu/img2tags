@@ -5,7 +5,7 @@ import logging
 import os
 import sys
 from pathlib import Path
-from typing import Final, Optional
+from typing import Final
 
 if "--offline" in sys.argv:
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
@@ -93,18 +93,18 @@ def run(
     *,
     path_or_name_model: str,
     path_in: Path,
-    path_out: Optional[Path],
+    path_out: Path | None,
     max_data_loader_n_workers: int,
     batch_size: int,
     ext: str,
-    threshold_str: Optional[str],
+    threshold_str: str | None,
     force_cpu: bool,
 ):
     if path_or_name_model in MODELS_ONLY_BS1:
         assert batch_size == 1, f"Only batch_size = 1 is supported for {path_or_name_model}"
     assert path_in.exists(), f"Not found: {path_in}"
 
-    path_config: Optional[Path] = None
+    path_config: Path | None = None
     path_model = Path(path_or_name_model)
     if path_model.exists():
         path_config = path_model.joinpath("config.json")
