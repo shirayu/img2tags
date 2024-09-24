@@ -41,15 +41,15 @@ wheels = [
 
 [[package]]
 name = "bitsandbytes"
-version = "0.43.3"
+version = "0.44.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "numpy" },
     { name = "torch" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f8/1a/3cbdd70ce276085602ffe7e4f52753a41c43464053eec9e76b3dd065e4c9/bitsandbytes-0.43.3-py3-none-manylinux_2_24_x86_64.whl", hash = "sha256:cc99507c352be0715098b2c7577b690dd158972dc4ea10c7495bac104c7c79f0", size = 137460618 },
-    { url = "https://files.pythonhosted.org/packages/9f/73/92084a26c983854078113cee7ff8b3b444a0528788c4c5b512f94fa4a535/bitsandbytes-0.43.3-py3-none-win_amd64.whl", hash = "sha256:257f6552f2144748a84e6c44e1f7a98f3da888f675ed74e18fd7f7eb13c6cafa", size = 136480428 },
+    { url = "https://files.pythonhosted.org/packages/bb/60/102e403e05dd58c3ea745d42108880f11a957e4aa369e282c9b69c4dc44a/bitsandbytes-0.44.0-py3-none-manylinux_2_24_x86_64.whl", hash = "sha256:f31b32ace5d2da0fc7f55b8ed205364298769daaa34d61a45e1f7f2bfd1b3622", size = 122419922 },
+    { url = "https://files.pythonhosted.org/packages/6d/d4/bff9d0bbe899a35749bc66eb83bda0345aa2b91621b1b3400ed58810c0d7/bitsandbytes-0.44.0-py3-none-win_amd64.whl", hash = "sha256:fb3dae427e2c07ecc2bd847e4bb49941093b88480d85ba207d5ac4db8d3ff42f", size = 121451909 },
 ]
 
 [[package]]
@@ -165,7 +165,7 @@ wheels = [
 
 [[package]]
 name = "huggingface-hub"
-version = "0.25.0"
+version = "0.25.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filelock" },
@@ -176,9 +176,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/81/18/52812091169325bf609feac958d5612e9c49788155a170352c7d55b6a74c/huggingface_hub-0.25.0.tar.gz", hash = "sha256:fb5fbe6c12fcd99d187ec7db95db9110fb1a20505f23040a5449a717c1a0db4d", size = 365666 }
+sdist = { url = "https://files.pythonhosted.org/packages/3d/88/3598259f226c37279e219810cc47cdeec39da1d07ad2e8c146af410d2cc6/huggingface_hub-0.25.1.tar.gz", hash = "sha256:9ff7cb327343211fbd06e2b149b8f362fd1e389454f3f14c6db75a4999ee20ff", size = 365676 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d5/ce/1f8e61cd63175cc2e79233b954b1c4e85363c788fb3a1fa23c87a25c9b81/huggingface_hub-0.25.0-py3-none-any.whl", hash = "sha256:e2f357b35d72d5012cfd127108c4e14abcd61ba4ebc90a5a374dc2456cb34e12", size = 436429 },
+    { url = "https://files.pythonhosted.org/packages/5f/f1/15dc793cb109a801346f910a6b350530f2a763a6e83b221725a0bcc1e297/huggingface_hub-0.25.1-py3-none-any.whl", hash = "sha256:a5158ded931b3188f54ea9028097312cb0acd50bffaaa2612014c3c526b44972", size = 436438 },
 ]
 
 [[package]]
