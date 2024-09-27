@@ -15,8 +15,8 @@ importers:
         specifier: ^0.42.0
         version: 0.42.0
       pyright:
-        specifier: ^1.1.381
-        version: 1.1.381
+        specifier: ^1.1.382
+        version: 1.1.382
 
 packages:
 
@@ -167,8 +167,8 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  package-json-from-dist@1.0.0:
-    resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
+  package-json-from-dist@1.0.1:
+    resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
   path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
@@ -182,8 +182,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  pyright@1.1.381:
-    resolution: {integrity: sha512-j9uGIgEBtVP9Xq0QM/NRZeolUxkfxPZT0rovsjiN0vjVF1vcyqjV2hAsidCtX+0GUTAjpEA511WZAyBCC8x97A==}
+  pyright@1.1.382:
+    resolution: {integrity: sha512-AsTbuh5OiV12GpWqSrekJHWj+dP4KEdB69rBh8Nr+n4OHeXKr5hFtGDksrlhcIGFW6WouHvZERkwA12FHPwWOg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -312,7 +312,7 @@ snapshots:
       jackspeak: 4.0.2
       minimatch: 10.0.1
       minipass: 7.1.2
-      package-json-from-dist: 1.0.0
+      package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
 
   ignore@6.0.2: {}
@@ -381,7 +381,7 @@ snapshots:
 
   minipass@7.1.2: {}
 
-  package-json-from-dist@1.0.0: {}
+  package-json-from-dist@1.0.1: {}
 
   path-key@3.1.1: {}
 
@@ -392,7 +392,7 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  pyright@1.1.381:
+  pyright@1.1.382:
     optionalDependencies:
       fsevents: 2.3.3
 
