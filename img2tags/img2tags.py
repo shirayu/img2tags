@@ -71,6 +71,12 @@ IMAGE_EXTENSIONS = {
     ".avif",
 }
 
+OUTPUT_EXTENSIONS = {
+    "txt",
+    "json",
+    "jsonl",
+}
+
 
 def glob_images(path_target: Path, exp: str):
     for p in path_target.glob(exp):
@@ -323,6 +329,7 @@ def get_opts() -> argparse.Namespace:
         "--ext",
         type=str,
         default="txt",
+        choices=OUTPUT_EXTENSIONS,
     )
     parser.add_argument(
         "--thresholds",
