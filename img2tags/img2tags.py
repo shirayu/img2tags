@@ -305,7 +305,7 @@ def get_opts() -> argparse.Namespace:
         "--model",
         "-m",
         type=str,
-        default="SmilingWolf/wd-eva02-large-tagger-v3", 
+        default="SmilingWolf/wd-eva02-large-tagger-v3",
     )
     parser.add_argument(
         "--batch_size",
