@@ -14,7 +14,7 @@ resolution-markers = [
 
 [[package]]
 name = "accelerate"
-version = "1.0.0"
+version = "1.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "huggingface-hub" },
@@ -25,9 +25,9 @@ dependencies = [
     { name = "safetensors" },
     { name = "torch" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b0/18/d0787ed555ba83f9fa175dff4f835a2f6a44c6eecc26b8caa72de6582423/accelerate-1.0.0.tar.gz", hash = "sha256:e39c99327d37c4583b4e6b70946915072b56f892836942eca22e1d25b71d6d4b", size = 333332 }
+sdist = { url = "https://files.pythonhosted.org/packages/a0/04/7f1b79a02f66a7e87e1716849b3bd295445cc46ecb63cb7521e6f7a72282/accelerate-1.0.1.tar.gz", hash = "sha256:e8f95fc2db14915dc0a9182edfcf3068e5ddb2fa310b583717ad44e5c442399c", size = 333238 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2a/7c/6daed4be624f903643edd1b91670ce321a4cf08afd2b96ac368461742e89/accelerate-1.0.0-py3-none-any.whl", hash = "sha256:6fc65cd7a43c41530e3cf8ffb1fbe3ac6e416ec3f4c9a55ddf407d374b887b68", size = 330937 },
+    { url = "https://files.pythonhosted.org/packages/2c/92/48aec3736ca778ffe5fa68e19e3c18917cba4de43fa46fe6176cccafe267/accelerate-1.0.1-py3-none-any.whl", hash = "sha256:c6aa0c7b8a797cb150471e90e3ca36ac41f5d4b40512cdd6f058b8bf25589467", size = 330926 },
 ]
 
 [[package]]
@@ -204,7 +204,7 @@ wheels = [
 
 [[package]]
 name = "img2tags"
-version = "1.6.3"
+version = "1.6.4"
 source = { editable = "." }
 dependencies = [
     { name = "huggingface-hub" },
