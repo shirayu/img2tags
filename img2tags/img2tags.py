@@ -294,12 +294,11 @@ def run(
         run_batch(b_imgs)
 
 
-def get_opts() -> argparse.Namespace:
+def get_opts() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "-i",
         "--input",
-        required=True,
         type=Path,
     )
     parser.add_argument(
@@ -336,14 +335,37 @@ def get_opts() -> argparse.Namespace:
         "--th",
         type=str,
     )
+    parser.add_argument(
+        "--version",
+        "-v",
+        action="store_true",
+    )
+
     parser.add_argument("--cpu", action="store_true", help="Force to use CPU")
     parser.add_argument("--offline", action="store_true", help="Set offline mode")
 
-    return parser.parse_args()
+    return parser
+
+
+def get_version(pkg_name: str) -> str:
+    from importlib.metadata import distributions
+
+    for dist in distributions():
+        if dist.metadata["Name"] == pkg_name:
+            return dist.metadata["Version"]
+    return "Unknown"
 
 
 def main() -> None:
-    opts = get_opts()
+    parser = get_opts()
+    opts = parser.parse_args()
+    if not opts.version and not opts.input:
+        parser.error("-i is required unless -v is specified")
+
+    if opts.version:
+        print(get_version("img2tags"))
+        return
+
     run(
         path_or_name_model=opts.model,
         path_in=opts.input,
