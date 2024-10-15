@@ -1,6 +1,6 @@
 [project]
 name = "img2tags"
-version = "1.6.4"
+version = "1.6.5"
 authors = [{author="Yuta Hayashibe", email = "yuta@hayashibe.jp"}]
 license = "Apache-2.0"
 readme = "README.md"
