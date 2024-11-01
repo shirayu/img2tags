@@ -4,7 +4,7 @@
     "devDependencies": {
         "markdown-it": "^14.1.0",
         "markdownlint-cli": "^0.42.0",
-        "pyright": "^1.1.386"
+        "pyright": "^1.1.387"
     },
     "engines": {
         "npm": "Use pnpm instead of npm!"
