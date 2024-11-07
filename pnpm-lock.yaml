@@ -15,8 +15,8 @@ importers:
         specifier: ^0.42.0
         version: 0.42.0
       pyright:
-        specifier: ^1.1.387
-        version: 1.1.387
+        specifier: ^1.1.388
+        version: 1.1.388
 
 packages:
 
@@ -60,8 +60,8 @@ packages:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
     engines: {node: '>=18'}
 
-  cross-spawn@7.0.3:
-    resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
+  cross-spawn@7.0.4:
+    resolution: {integrity: sha512-9KdyVPPtLHjPAD7tcuzSFs64UfHlLJt7U6qP4/bFVLyjLceyizj6s6jO6YBaV5d0G7g/9KnY/dOpLR4Rcg8YDg==}
     engines: {node: '>= 8'}
 
   deep-extend@0.6.0:
@@ -182,8 +182,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  pyright@1.1.387:
-    resolution: {integrity: sha512-1RljSJSWya2+d8SpA3gDBD4eXUuQz79Zw2JwNwxG+qkOJMz6mbUiglop2ZsnEwURpFLa/uixG9sKlUJ8xgyxuw==}
+  pyright@1.1.388:
+    resolution: {integrity: sha512-AcQhtxh/Dnr3l0CinT2xUzsNHpOFVI304EzwY9Y9A3FC8JOV5YJTC3fvrh6zOgHDUH7S6PYABaUdHr/e4rv8+g==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -280,7 +280,7 @@ snapshots:
 
   commander@12.1.0: {}
 
-  cross-spawn@7.0.3:
+  cross-spawn@7.0.4:
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
@@ -298,7 +298,7 @@ snapshots:
 
   foreground-child@3.3.0:
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.4
       signal-exit: 4.1.0
 
   fsevents@2.3.3:
@@ -392,7 +392,7 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  pyright@1.1.387:
+  pyright@1.1.388:
     optionalDependencies:
       fsevents: 2.3.3
 
