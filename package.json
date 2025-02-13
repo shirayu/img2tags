@@ -2,8 +2,10 @@
   "author": "",
   "description": "",
   "devDependencies": {
+    "@taplo/cli": "^0.7.0",
     "markdown-it": "^14.1.0",
     "markdownlint-cli": "^0.44.0",
+    "npm-run-all2": "^7.0.2",
     "pyright": "^1.1.394"
   },
   "engines": {
@@ -11,11 +13,18 @@
   },
   "license": "",
   "main": "",
-  "name": "pyright-exec",
+  "name": "img2tags",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "pyright": "pyright"
+    "format": "run-s format:markdownlint format:toml",
+    "format:markdownlint": "markdownlint -f ./*.md doc/*.md",
+    "format:toml": "taplo format *.toml",
+    "test": ":",
+    "lint": "run-s lint:md lint:pyright lint:toml",
+    "lint:md": "npx markdownlint *.md docs/*.md",
+    "lint:pyright": "pyright",
+    "lint:toml": "taplo format --check *.toml"
   },
-  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b",
-  "version": "1.6.5"
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }
