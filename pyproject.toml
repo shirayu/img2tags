@@ -1,48 +1,33 @@
 [project]
 name = "img2tags"
 version = "1.6.5"
-authors = [{author="Yuta Hayashibe", email = "yuta@hayashibe.jp"}]
+authors = [{ author = "Yuta Hayashibe", email = "yuta@hayashibe.jp" }]
 license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://github.com/shirayu/img2tags"
 repository = "https://github.com/shirayu/img2tags"
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.10,<4"
 dependencies = [
-    "huggingface-hub>=0.25.0",
-    "numpy>=2.1.1",
-    "opencv-python>=4.10.0.84",
-    "pillow>=10.4.0",
-    "pydantic>=2.9.2",
-    "rich>=13.8.1",
-    "torch>=2.4.1",
+  "huggingface-hub>=0.25.0",
+  "numpy>=2.1.1",
+  "opencv-python>=4.10.0.84",
+  "pillow>=10.4.0",
+  "pydantic>=2.9.2",
+  "rich>=13.8.1",
+  "torch>=2.4.1",
 ]
 
 [project.optional-dependencies]
-convert = [
-    "onnx>=1.16.2",
-]
-cpu = [
-    "onnxruntime>=1.19.2",
-]
-gpu = [
-    "onnxruntime-gpu>=1.19.2",
-]
-text = [
-    "accelerate>=0.34.2",
-    "bitsandbytes>=0.43.3",
-    "transformers>=4.44.2",
-]
+cpu = ["onnxruntime>=1.19.2"]
+gpu = ["onnxruntime-gpu>=1.19.2"]
+text = ["accelerate>=0.34.2", "bitsandbytes>=0.43.3", "transformers>=4.44.2"]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv]
-dev-dependencies = [
-    "accelerate>=0.34.2",
-    "ruff>=0.6.6",
-    "yamllint>=1.35.1",
-]
+dev-dependencies = ["accelerate>=0.34.2", "ruff>=0.9.6", "yamllint>=1.35.1"]
 
 [project.scripts]
 img2tags = "img2tags.img2tags:main"
@@ -50,10 +35,7 @@ img2text = "img2tags.img2text:main"
 
 [tool.pyright]
 pythonVersion = "3.10"
-typeCheckingMode = "basic"
-exclude = [".venv", "**/node_modules", "**/__pycache__",]
-reportPrivateImportUsage = "information"
-reportUnusedVariable="warning"
+reportDeprecated = "error"
 
 [tool.ruff]
 line-length = 120
