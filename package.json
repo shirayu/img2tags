@@ -3,7 +3,6 @@
   "description": "",
   "devDependencies": {
     "@taplo/cli": "^0.7.0",
-    "markdown-it": "^14.1.0",
     "markdownlint-cli": "^0.44.0",
     "npm-run-all2": "^7.0.2",
     "pyright": "^1.1.394"
@@ -16,11 +15,11 @@
   "name": "img2tags",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "format": "run-s format:markdownlint format:toml",
-    "format:markdownlint": "markdownlint -f ./*.md doc/*.md",
+    "format": "run-p format:md format:toml",
+    "format:md": "markdownlint -f ./*.md doc/*.md",
     "format:toml": "taplo format *.toml",
     "test": ":",
-    "lint": "run-s lint:md lint:pyright lint:toml",
+    "lint": "run-p lint:md lint:pyright lint:toml",
     "lint:md": "npx markdownlint *.md docs/*.md",
     "lint:pyright": "pyright",
     "lint:toml": "taplo format --check *.toml"
