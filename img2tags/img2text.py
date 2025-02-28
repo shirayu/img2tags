@@ -105,7 +105,7 @@ class Captioner:
                     continue
                 qs.append(q)
         self.qs = qs
-        self.qs_encoded = self.processor(
+        self.qs_encoded = self.processor(  # type: ignore
             text=self.qs * self.batch_size,
             return_tensors="pt",
             padding=True,
@@ -151,7 +151,7 @@ class Captioner:
                 if myunit == self.batch_size:
                     ienc.update(self.qs_encoded)
                 else:
-                    __qs_encoded = self.processor(
+                    __qs_encoded = self.processor(  # type: ignore
                         text=self.qs * self.batch_size,
                         return_tensors="pt",
                         padding=True,
