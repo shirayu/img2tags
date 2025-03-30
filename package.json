@@ -20,7 +20,7 @@
     "format:toml": "taplo format *.toml",
     "test": ":",
     "lint": "run-p lint:md lint:pyright lint:toml",
-    "lint:md": "npx markdownlint *.md docs/*.md",
+    "lint:md": "markdownlint *.md docs/*.md",
     "lint:pyright": "pyright",
     "lint:toml": "taplo format --check *.toml"
   },
