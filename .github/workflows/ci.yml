@@ -18,7 +18,7 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-      - run: uv sync --extra gpu --extra text
+      - run: uv sync --extra gpu
 
       - uses: actions/setup-node@v4
         with:
