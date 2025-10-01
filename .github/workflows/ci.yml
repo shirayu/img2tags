@@ -1,13 +1,15 @@
----
 name: CI
-on:  # yamllint disable-line rule:truthy
+
+on:
   push:
+    branches:
+      - main
+      - develop
   pull_request:
     types:
       - opened
       - synchronize
       - reopened
-
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -26,10 +28,6 @@ jobs:
           enable-cache: true
       - run: uv sync --extra gpu
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.1.0
 
@@ -42,12 +40,12 @@ jobs:
         name: Setup pnpm cache
         with:
           path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-uv-store-${{ hashFiles('**/uv.lock') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Install Task
         uses: arduino/setup-task@v2
