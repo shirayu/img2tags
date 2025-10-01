@@ -2,8 +2,11 @@
 # yamllint disable rule:line-length
 name: Typos
 
-on:  # yamllint disable-line rule:truthy
+on:
   push:
+    branches:
+      - main
+      - develop
   pull_request:
     types:
       - opened
