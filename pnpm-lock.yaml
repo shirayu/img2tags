@@ -12,8 +12,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0
       markdownlint-cli:
-        specifier: ^0.46.0
-        version: 0.46.0
+        specifier: ^0.47.0
+        version: 0.47.0
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -46,6 +46,10 @@ packages:
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
+
+  ansi-regex@6.2.2:
+    resolution: {integrity: sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==}
+    engines: {node: '>=12'}
 
   ansi-styles@6.2.3:
     resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
@@ -116,6 +120,10 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  get-east-asian-width@1.4.0:
+    resolution: {integrity: sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==}
+    engines: {node: '>=18'}
+
   ignore@7.0.5:
     resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
@@ -158,8 +166,8 @@ packages:
     resolution: {integrity: sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ==}
     engines: {node: '>=0.10.0'}
 
-  katex@0.16.25:
-    resolution: {integrity: sha512-woHRUZ/iF23GBP1dkDQMh1QBad9dmr8/PAwNA54VrSOVYgI12MAcE14TqnDdQOdzyEonGzMepYnqBMYdsoAr8Q==}
+  katex@0.16.27:
+    resolution: {integrity: sha512-aeQoDkuRWSqQN6nSvVCEFvfXdqo1OQiCmmW1kc9xSdjutPv7BGO7pqY9sQRJpMOGrEdfDgF2TfRXe5eUAD2Waw==}
     hasBin: true
 
   linkify-it@5.0.0:
@@ -169,13 +177,13 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  markdownlint-cli@0.46.0:
-    resolution: {integrity: sha512-4gxTNzPjpLnY7ftrEZD4flPY0QBkQLiqezb6KURFSkV+vPHFOsYw8OMtY6fu82Yt8ghtSrWegpYdq1ix25VFLQ==}
+  markdownlint-cli@0.47.0:
+    resolution: {integrity: sha512-HOcxeKFAdDoldvoYDofd85vI8LgNWy8vmYpCwnlLV46PJcodmGzD7COSSBlhHwsfT4o9KrAStGodImVBus31Bg==}
     engines: {node: '>=20'}
     hasBin: true
 
-  markdownlint@0.39.0:
-    resolution: {integrity: sha512-Xt/oY7bAiHwukL1iru2np5LIkhwD19Y7frlsiDILK62v3jucXCD6JXlZlwMG12HZOR+roHIVuJZrfCkOhp6k3g==}
+  markdownlint@0.40.0:
+    resolution: {integrity: sha512-UKybllYNheWac61Ia7T6fzuQNDZimFIpCg2w6hHjgV1Qu0w1TV0LlSgryUGzM0bkKQCBhy2FDhEELB73Kb0kAg==}
     engines: {node: '>=20'}
 
   mdurl@2.0.0:
@@ -328,6 +336,14 @@ packages:
     resolution: {integrity: sha512-QlaZEqcAH3/RtNyet1IPIYPsEWAaYyXXv1Krsi+1L/QHppjX4Ifm8MQsBISz9vE8cHicIq3clogsheili5vhaQ==}
     engines: {node: '>= 18'}
 
+  string-width@8.1.0:
+    resolution: {integrity: sha512-Kxl3KJGb/gxkaUMOjRsQ8IrXiGW75O4E3RPjFIINOVH8AMl2SQ/yWdTzWwF3FevIX9LcMAjJW+GRwAlAbTSXdg==}
+    engines: {node: '>=20'}
+
+  strip-ansi@7.1.2:
+    resolution: {integrity: sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==}
+    engines: {node: '>=12'}
+
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
@@ -368,6 +384,8 @@ snapshots:
   '@types/ms@2.1.0': {}
 
   '@types/unist@2.0.11': {}
+
+  ansi-regex@6.2.2: {}
 
   ansi-styles@6.2.3: {}
 
@@ -414,6 +432,8 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  get-east-asian-width@1.4.0: {}
+
   ignore@7.0.5: {}
 
   ini@4.1.3: {}
@@ -443,7 +463,7 @@ snapshots:
 
   jsonpointer@5.0.1: {}
 
-  katex@0.16.25:
+  katex@0.16.27:
     dependencies:
       commander: 8.3.0
 
@@ -460,7 +480,7 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  markdownlint-cli@0.46.0:
+  markdownlint-cli@0.47.0:
     dependencies:
       commander: 14.0.2
       deep-extend: 0.6.0
@@ -469,7 +489,7 @@ snapshots:
       jsonc-parser: 3.3.1
       jsonpointer: 5.0.1
       markdown-it: 14.1.0
-      markdownlint: 0.39.0
+      markdownlint: 0.40.0
       minimatch: 10.1.1
       run-con: 1.3.2
       smol-toml: 1.5.2
@@ -477,7 +497,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  markdownlint@0.39.0:
+  markdownlint@0.40.0:
     dependencies:
       micromark: 4.0.2
       micromark-core-commonmark: 2.0.3
@@ -487,6 +507,7 @@ snapshots:
       micromark-extension-gfm-table: 2.1.1
       micromark-extension-math: 3.1.0
       micromark-util-types: 2.0.2
+      string-width: 8.1.0
     transitivePeerDependencies:
       - supports-color
 
@@ -553,7 +574,7 @@ snapshots:
     dependencies:
       '@types/katex': 0.16.7
       devlop: 1.1.0
-      katex: 0.16.25
+      katex: 0.16.27
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
@@ -730,6 +751,15 @@ snapshots:
   shell-quote@1.8.3: {}
 
   smol-toml@1.5.2: {}
+
+  string-width@8.1.0:
+    dependencies:
+      get-east-asian-width: 1.4.0
+      strip-ansi: 7.1.2
+
+  strip-ansi@7.1.2:
+    dependencies:
+      ansi-regex: 6.2.2
 
   strip-json-comments@3.1.1: {}
 
