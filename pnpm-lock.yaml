@@ -18,8 +18,8 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4
       pyright:
-        specifier: ^1.1.407
-        version: 1.1.407
+        specifier: ^1.1.408
+        version: 1.1.408
 
 packages:
 
@@ -38,8 +38,8 @@ packages:
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
-  '@types/katex@0.16.7':
-    resolution: {integrity: sha512-HMwFiRujE5PjrgwHQ25+bsLJgowjGjm5Z8FVSf0N6PwgJrwxH0QxzHYDcKsTfV3wva0vzrpqMTJS2jXPr5BMEQ==}
+  '@types/katex@0.16.8':
+    resolution: {integrity: sha512-trgaNyfU+Xh2Tc+ABIb44a5AYUpicB3uwirOioeOkNPPbmgRNtcWyDeeFRzjPZENO9Vq8gvVqfhaaXWLlevVwg==}
 
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
@@ -307,8 +307,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  pyright@1.1.407:
-    resolution: {integrity: sha512-zU+peTFEVUdokNQyUBhGQYt+NWI/3aiNlvBbDBSsn5Ti334XElFUs+GDjQzCbchYfkT+DvMAT3OkMcV4CuEfDg==}
+  pyright@1.1.408:
+    resolution: {integrity: sha512-N61pxaLLCsPcUuPPHMNIrGoZgGBgrbjBX5UqkaT5UV8NVZdL7ExsO6N3ectv1DzAUsLOzdlyqoYtX76u8eF4YA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -379,7 +379,7 @@ snapshots:
     dependencies:
       '@types/ms': 2.1.0
 
-  '@types/katex@0.16.7': {}
+  '@types/katex@0.16.8': {}
 
   '@types/ms@2.1.0': {}
 
@@ -572,7 +572,7 @@ snapshots:
 
   micromark-extension-math@3.1.0:
     dependencies:
-      '@types/katex': 0.16.7
+      '@types/katex': 0.16.8
       devlop: 1.1.0
       katex: 0.16.27
       micromark-factory-space: 2.0.1
@@ -726,7 +726,7 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  pyright@1.1.407:
+  pyright@1.1.408:
     optionalDependencies:
       fsevents: 2.3.3
 
