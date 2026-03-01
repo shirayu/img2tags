@@ -1,0 +1,48 @@
+[[tools.node]]
+version = "24.14.0"
+backend = "core:node"
+"platforms.linux-arm64" = { checksum = "sha256:f44740cd218de8127f1c44c41510a3a740fa5c9c8d1cdce1c3bedada79f3cde7", url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-arm64.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:dbf5b8665dec15e59e6359a517fefb47b23fdb9152d8def975b9bca3dfc6d355", url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:a1a54f46a750d2523d628d924aab61758a51c9dad3e0238beb14141be9615dd3", url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-arm64.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:f2879eb810e25993a0578e5d878930266fd2eafcffe9f2839b3d8db354d4879e", url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-x64.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:313fa40c0d7b18575821de8cb17483031fe07d95de5994f6f435f3b345f85c66", url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip"}
+
+[[tools.pnpm]]
+version = "10.30.3"
+backend = "aqua:pnpm/pnpm"
+"platforms.linux-arm64" = { checksum = "sha256:9488f48d6967bfa8f5ebc5c077aae297d2fe25287697b4c8edf991ff945d8af7", url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-arm64"}
+"platforms.linux-x64" = { checksum = "sha256:5dc971e801610471b5cd6729ba289531be6695bd50d5e833fe22b18896b13a06", url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-x64"}
+"platforms.macos-arm64" = { checksum = "sha256:ccfb6e54fe29d13715e2fe418ef0374cde5a7f68b95f5ed5da5f564886af9d17", url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-macos-arm64"}
+"platforms.macos-x64" = { checksum = "sha256:d9be0fd3989c09f5abf7e52f10d8d0294f757af61bbbd59727d607c85205a788", url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-macos-x64"}
+"platforms.windows-x64" = { checksum = "sha256:de8337a864056472542b951ab23ad54149cc63127bb2faf3175b7902b764f188", url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-win-x64.exe"}
+
+[[tools.python]]
+version = "3.13.12"
+backend = "core:python"
+"platforms.linux-arm64" = { checksum = "sha256:180918f7fe5384bc09cf836103a5318a94a15725fa64df2005caedd56c36d64c", url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260211/cpython-3.13.12+20260211-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:bab0e2aeec8a32a7f5cb62240d088d50ea468ef6d7522681bc171d527a5ba6f8", url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260211/cpython-3.13.12+20260211-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:fdf98aad59d6fb99a0fc42a0392956bd7f246793003c1789b798f20e38b8ae75", url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260211/cpython-3.13.12+20260211-aarch64-apple-darwin-install_only_stripped.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:a43f811568fba89d788fa822d85b7f18822f695d76f96709dca017dc9b86b263", url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260211/cpython-3.13.12+20260211-x86_64-apple-darwin-install_only_stripped.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:b73415a86dcf298a2f4a585c5371fb1cf003576d2bdc2b80a34d5321284b2ed4", url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260211/cpython-3.13.12+20260211-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"}
+
+[[tools.task]]
+version = "3.48.0"
+backend = "ubi:go-task/task"
+
+[[tools.typos]]
+version = "1.44.0"
+backend = "aqua:crate-ci/typos"
+"platforms.linux-arm64" = { checksum = "sha256:132c20fc5e3c9ba540ec55a0a468dcb9c1504625a405df1c237b10dd4f2ec433", url = "https://github.com/crate-ci/typos/releases/download/v1.44.0/typos-v1.44.0-aarch64-unknown-linux-musl.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:1b788b7d764e2f20fe089487428a3944ed218d1fb6fcd8eac4230b5893a38779", url = "https://github.com/crate-ci/typos/releases/download/v1.44.0/typos-v1.44.0-x86_64-unknown-linux-musl.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:ca82d593351dbac519a5c9fa832fc147b176d80100d00d08e855fcb46d43882d", url = "https://github.com/crate-ci/typos/releases/download/v1.44.0/typos-v1.44.0-aarch64-apple-darwin.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:70e7cbfd9c0bac3b27d096171413a8fff989cc9f9227d3ef66694ed99fdc7b5c", url = "https://github.com/crate-ci/typos/releases/download/v1.44.0/typos-v1.44.0-x86_64-apple-darwin.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:afd85c8f3c5c925ee7452389acdf70b048d8c6eae5e52a581e63a7d1b7655f17", url = "https://github.com/crate-ci/typos/releases/download/v1.44.0/typos-v1.44.0-x86_64-pc-windows-msvc.zip"}
+
+[[tools.uv]]
+version = "0.10.7"
+backend = "aqua:astral-sh/uv"
+"platforms.linux-arm64" = { checksum = "sha256:115291f9943531a3b63db3a2eabda8b74b8da4831551679382cb309c9debd9f7", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-aarch64-unknown-linux-musl.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:992529add6024e67135b1c80617abd2eca7be2cf0b99b3911f923de815bd8dc1", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-x86_64-unknown-linux-musl.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:1eb4dcc5e0fc8669fa0b33cf1151b64ba3b8c26b60dceff4f7a686129e2af22b", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-aarch64-apple-darwin.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:4fed9d4f4608fb3850db714ee37244436f850a2b6e485bc510795679c2d08866", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-x86_64-apple-darwin.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:8881afb877996a1373a12e816395122a8d39a3ac06cd066272acdb49510cf0fe", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-x86_64-pc-windows-msvc.zip"}

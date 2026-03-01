@@ -16,20 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: "Set up Python"
-        id: setup-python
-        uses: actions/setup-python@v6
-        with:
-          python-version-file: "pyproject.toml"
+      - name: Setup mise
+        uses: jdx/mise-action@v2
 
-      - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-      - run: uv sync --extra gpu
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4.2.0
+      - name: Install uv dependencies
+        run: uv sync --extra gpu
 
       - name: Get pnpm store directory
         shell: bash
@@ -46,12 +37,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Install Task
-        uses: arduino/setup-task@v2
-        with:
-          version: 3.x
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: uv run task -p lint
       - run: uv run task -p test
