@@ -3,7 +3,7 @@
   "description": "",
   "devDependencies": {
     "@taplo/cli": "^0.7.0",
-    "markdownlint-cli": "^0.47.0",
+    "markdownlint-cli2": "^0.21.0",
     "npm-run-all2": "^8.0.4",
     "pyright": "^1.1.408"
   },
@@ -16,11 +16,11 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "format": "run-p format:md format:toml",
-    "format:md": "markdownlint -f ./*.md doc/*.md",
+    "format:md": " markdownlint-cli2 --fix",
     "format:toml": "taplo format *.toml",
     "test": ":",
     "lint": "run-p lint:md lint:pyright lint:toml",
-    "lint:md": "markdownlint *.md docs/*.md",
+    "lint:md": "markdownlint-cli2",
     "lint:pyright": "pyright",
     "lint:toml": "taplo format --check *.toml"
   },
