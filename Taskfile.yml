@@ -17,7 +17,7 @@ tasks:
       - pnpm format
 
   lint:
-    deps: [lint_yaml, lint_ruff_format, lint_ruff_check, lint_pnpm]
+    deps: [lint_yaml, lint_ruff_format, lint_ruff_check, lint_pnpm, lint_typos]
 
   lint_yaml:
     cmds:
