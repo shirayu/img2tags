@@ -33,38 +33,6 @@ checksum = "sha256:313fa40c0d7b18575821de8cb17483031fe07d95de5994f6f435f3b345f85
 url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip"
 
 [[tools.pnpm]]
-version = "10.30.3"
-backend = "aqua:pnpm/pnpm"
-
-[tools.pnpm."platforms.linux-arm64"]
-checksum = "sha256:9488f48d6967bfa8f5ebc5c077aae297d2fe25287697b4c8edf991ff945d8af7"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-arm64"
-
-[tools.pnpm."platforms.linux-arm64-musl"]
-checksum = "sha256:9488f48d6967bfa8f5ebc5c077aae297d2fe25287697b4c8edf991ff945d8af7"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-arm64"
-
-[tools.pnpm."platforms.linux-x64"]
-checksum = "sha256:5dc971e801610471b5cd6729ba289531be6695bd50d5e833fe22b18896b13a06"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-x64"
-
-[tools.pnpm."platforms.linux-x64-musl"]
-checksum = "sha256:5dc971e801610471b5cd6729ba289531be6695bd50d5e833fe22b18896b13a06"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-x64"
-
-[tools.pnpm."platforms.macos-arm64"]
-checksum = "sha256:ccfb6e54fe29d13715e2fe418ef0374cde5a7f68b95f5ed5da5f564886af9d17"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-macos-arm64"
-
-[tools.pnpm."platforms.macos-x64"]
-checksum = "sha256:d9be0fd3989c09f5abf7e52f10d8d0294f757af61bbbd59727d607c85205a788"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-macos-x64"
-
-[tools.pnpm."platforms.windows-x64"]
-checksum = "sha256:de8337a864056472542b951ab23ad54149cc63127bb2faf3175b7902b764f188"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-win-x64.exe"
-
-[[tools.pnpm]]
 version = "10.31.0"
 backend = "aqua:pnpm/pnpm"
 
@@ -96,44 +64,76 @@ url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-macos-x64"
 checksum = "sha256:26cfa9cb3963e4841fbd0da3b5114b1c72631b41b5617ed07f451d5974cfa494"
 url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-win-x64.exe"
 
+[[tools.pnpm]]
+version = "10.32.1"
+backend = "aqua:pnpm/pnpm"
+
+[tools.pnpm."platforms.linux-arm64"]
+checksum = "sha256:c0db0b837971fde6f9781af8914e54eb163721193a36d35cbcf1794b3474a407"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-linux-arm64"
+
+[tools.pnpm."platforms.linux-arm64-musl"]
+checksum = "sha256:c0db0b837971fde6f9781af8914e54eb163721193a36d35cbcf1794b3474a407"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-linux-arm64"
+
+[tools.pnpm."platforms.linux-x64"]
+checksum = "sha256:c5607a86bfb948297e96b393a53c90107766fe56329e62967b1f239d861d4363"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-linux-x64"
+
+[tools.pnpm."platforms.linux-x64-musl"]
+checksum = "sha256:c5607a86bfb948297e96b393a53c90107766fe56329e62967b1f239d861d4363"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-linux-x64"
+
+[tools.pnpm."platforms.macos-arm64"]
+checksum = "sha256:b0904b4e0cf36704fcdc24bcdb5f03388799a631510d1fb0d459ea69c7b1e2d9"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-macos-arm64"
+
+[tools.pnpm."platforms.macos-x64"]
+checksum = "sha256:8b83277343bbc400fdb90608bd51b4f56e380e6624ac5fd0e11d6c08815e3f04"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-macos-x64"
+
+[tools.pnpm."platforms.windows-x64"]
+checksum = "sha256:849141504c83bcd08a3d84dc20d43cff2584d672138d28c33ad62bdac809e7f2"
+url = "https://github.com/pnpm/pnpm/releases/download/v10.32.1/pnpm-win-x64.exe"
+
 [[tools.python]]
 version = "3.13.12"
 backend = "core:python"
 
 [tools.python."platforms.linux-arm64"]
-checksum = "sha256:207c5504dfd2627949be652f2740bddab5ba6e6bea6ce45de9db1858f67c9b42"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:0ebc0049121318b5de80b887d22abaed55dd302014f73cd6811c9981a83d960e"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
 
 [tools.python."platforms.linux-arm64-musl"]
-checksum = "sha256:207c5504dfd2627949be652f2740bddab5ba6e6bea6ce45de9db1858f67c9b42"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:0ebc0049121318b5de80b887d22abaed55dd302014f73cd6811c9981a83d960e"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
 
 [tools.python."platforms.linux-x64"]
-checksum = "sha256:4ecfaffe0db6d4363c2bca7a40f017c56fdad1f399d6218b7ddc1f47f071ffc6"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:904adc9bc4371c01b20f7e75a19b10f07fb577889be02bf21f7f449229b97611"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
 
 [tools.python."platforms.linux-x64-musl"]
-checksum = "sha256:4ecfaffe0db6d4363c2bca7a40f017c56fdad1f399d6218b7ddc1f47f071ffc6"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:904adc9bc4371c01b20f7e75a19b10f07fb577889be02bf21f7f449229b97611"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
 
 [tools.python."platforms.macos-arm64"]
-checksum = "sha256:0103ab534b93472b1e2036fbb127a0dd4df73f437a4d8d7ce6fbe7e3d1f4fbbd"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-aarch64-apple-darwin-install_only_stripped.tar.gz"
+checksum = "sha256:21f41942eda3c54cbd8f13bd28b36c496c58bf1895c169fac7f3bcc6a54079fd"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-aarch64-apple-darwin-install_only_stripped.tar.gz"
 
 [tools.python."platforms.macos-x64"]
-checksum = "sha256:ca97cdd8338716dac48204f1b33e51ec4f072eeeb91cecdb9ea3bfecae1c538a"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-x86_64-apple-darwin-install_only_stripped.tar.gz"
+checksum = "sha256:c63a5f761bb212191971e6746d08aad0d052754df61c0e74f0776caf4ce837c8"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-x86_64-apple-darwin-install_only_stripped.tar.gz"
 
 [tools.python."platforms.windows-x64"]
-checksum = "sha256:eb1e212b97b001efc1281bb01fd26ca1ecdfe9ef2875b52c58d39e9719ab75df"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260303/cpython-3.13.12+20260303-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
-
-[[tools.task]]
-version = "3.48.0"
-backend = "ubi:go-task/task"
+checksum = "sha256:09df14cdd7ad59863596189623b2f34f6a2925b9317279ce53346a38dd62e60f"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
 
 [[tools.task]]
 version = "3.49.0"
+backend = "ubi:go-task/task"
+
+[[tools.task]]
+version = "3.49.1"
 backend = "ubi:go-task/task"
 
 [[tools.typos]]
