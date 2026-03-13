@@ -33,38 +33,6 @@ checksum = "sha256:313fa40c0d7b18575821de8cb17483031fe07d95de5994f6f435f3b345f85
 url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip"
 
 [[tools.pnpm]]
-version = "10.31.0"
-backend = "aqua:pnpm/pnpm"
-
-[tools.pnpm."platforms.linux-arm64"]
-checksum = "sha256:5e8f5b3fc8fc00963686a8502ddf5882681b29dcfe392671336b660f78127152"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-linux-arm64"
-
-[tools.pnpm."platforms.linux-arm64-musl"]
-checksum = "sha256:5e8f5b3fc8fc00963686a8502ddf5882681b29dcfe392671336b660f78127152"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-linux-arm64"
-
-[tools.pnpm."platforms.linux-x64"]
-checksum = "sha256:21f99c8eb302967af820ce575a48717d017203269916f932e34f5ff86334008d"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-linux-x64"
-
-[tools.pnpm."platforms.linux-x64-musl"]
-checksum = "sha256:21f99c8eb302967af820ce575a48717d017203269916f932e34f5ff86334008d"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-linux-x64"
-
-[tools.pnpm."platforms.macos-arm64"]
-checksum = "sha256:6f2a7f51faa0bbee013fcad9be2f0d503e3a77d872c8f9551866285c64b98cd2"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-macos-arm64"
-
-[tools.pnpm."platforms.macos-x64"]
-checksum = "sha256:1e8e40e0c127248300975ffc50de9d7d49fade78b55240cab1db02a9324f65d6"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-macos-x64"
-
-[tools.pnpm."platforms.windows-x64"]
-checksum = "sha256:26cfa9cb3963e4841fbd0da3b5114b1c72631b41b5617ed07f451d5974cfa494"
-url = "https://github.com/pnpm/pnpm/releases/download/v10.31.0/pnpm-win-x64.exe"
-
-[[tools.pnpm]]
 version = "10.32.1"
 backend = "aqua:pnpm/pnpm"
 
@@ -127,10 +95,6 @@ url = "https://github.com/astral-sh/python-build-standalone/releases/download/20
 [tools.python."platforms.windows-x64"]
 checksum = "sha256:09df14cdd7ad59863596189623b2f34f6a2925b9317279ce53346a38dd62e60f"
 url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260310/cpython-3.13.12+20260310-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
-
-[[tools.task]]
-version = "3.49.0"
-backend = "ubi:go-task/task"
 
 [[tools.task]]
 version = "3.49.1"
@@ -199,3 +163,35 @@ url = "https://github.com/astral-sh/uv/releases/download/0.10.9/uv-x86_64-apple-
 [tools.uv."platforms.windows-x64"]
 checksum = "sha256:f58dc40896000229db7c52b8bdd931394040ef2ad59abd1eda841f6d70b13d7a"
 url = "https://github.com/astral-sh/uv/releases/download/0.10.9/uv-x86_64-pc-windows-msvc.zip"
+
+[[tools.uv]]
+version = "0.10.10"
+backend = "aqua:astral-sh/uv"
+
+[tools.uv."platforms.linux-arm64"]
+checksum = "sha256:d08c08b82cdcaf2bd3d928ffe844d3558dda53f90066db6ef9174157cc763252"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-aarch64-unknown-linux-musl.tar.gz"
+
+[tools.uv."platforms.linux-arm64-musl"]
+checksum = "sha256:d08c08b82cdcaf2bd3d928ffe844d3558dda53f90066db6ef9174157cc763252"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-aarch64-unknown-linux-musl.tar.gz"
+
+[tools.uv."platforms.linux-x64"]
+checksum = "sha256:74544e8755fbc27559e22e29fd561bdc48f91b8bd8323e760a1130f32433bea4"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.uv."platforms.linux-x64-musl"]
+checksum = "sha256:74544e8755fbc27559e22e29fd561bdc48f91b8bd8323e760a1130f32433bea4"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-x86_64-unknown-linux-musl.tar.gz"
+
+[tools.uv."platforms.macos-arm64"]
+checksum = "sha256:8a09f0ef51ee7f7170731b4cb8bde5bf9ba6da5304f49a7df6cdab42a1f37b5d"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-aarch64-apple-darwin.tar.gz"
+
+[tools.uv."platforms.macos-x64"]
+checksum = "sha256:dd18420591d625f9b4ca2b57a7a6fe3cce43910f02e02d90e47a4101428de14a"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-x86_64-apple-darwin.tar.gz"
+
+[tools.uv."platforms.windows-x64"]
+checksum = "sha256:d31a30f1dfb96e630a08d5a9b3f3f551254b7ed6e9b7e495f46a4232661c7252"
+url = "https://github.com/astral-sh/uv/releases/download/0.10.10/uv-x86_64-pc-windows-msvc.zip"
