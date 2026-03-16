@@ -17,12 +17,12 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Setup mise
-        uses: jdx/mise-action@v4
+        uses: jdx/mise-action@c1ecc8f748cd28cdeabf76dab3cccde4ce692fe4 # v4.0.0
 
-      - uses: actions/cache@v5
+      - uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         name: Setup uv cache
         with:
           path: .venv
@@ -38,7 +38,7 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> "${GITHUB_ENV}"
 
-      - uses: actions/cache@v5
+      - uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         name: Setup pnpm cache
         with:
           path: ${{ env.STORE_PATH }}
