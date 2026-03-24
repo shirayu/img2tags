@@ -2,9 +2,10 @@
 node = "lts"
 pnpm = "latest"
 python = "3.13.12"
-"aqua:go-task/task" = "latest"
 typos = "latest"
 uv = "latest"
+task = "latest"
+hadolint = "latest"
 
 [settings]
 lockfile = true
