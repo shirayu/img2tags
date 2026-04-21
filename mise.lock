@@ -136,68 +136,68 @@ url = "https://github.com/astral-sh/python-build-standalone/releases/download/20
 provenance = "github-attestations"
 
 [[tools.task]]
-version = "3.49.1"
+version = "3.50.0"
 backend = "aqua:go-task/task"
 
 [tools.task."platforms.linux-arm64"]
-checksum = "sha256:aa6732c9c66397c5380ec2b60c070fd599075b2a8538dba03f3a21edc99ab0cb"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_linux_arm64.tar.gz"
+checksum = "sha256:ee67e7d999a4a70711bff1946c70bf76628012c91d9be55626ee90ba976897da"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_linux_arm64.tar.gz"
 
 [tools.task."platforms.linux-arm64-musl"]
-checksum = "sha256:aa6732c9c66397c5380ec2b60c070fd599075b2a8538dba03f3a21edc99ab0cb"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_linux_arm64.tar.gz"
+checksum = "sha256:ee67e7d999a4a70711bff1946c70bf76628012c91d9be55626ee90ba976897da"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_linux_arm64.tar.gz"
 
 [tools.task."platforms.linux-x64"]
-checksum = "sha256:4e7d24f1bf38218aec8f244eb7ba671f898830f9f87b3c9b30ff1c09e3135576"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_linux_amd64.tar.gz"
+checksum = "sha256:d449ba85ab85a0769989d78f8b9872938e4ba9347f7f4f925f73d98272a0a655"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_linux_amd64.tar.gz"
 
 [tools.task."platforms.linux-x64-musl"]
-checksum = "sha256:4e7d24f1bf38218aec8f244eb7ba671f898830f9f87b3c9b30ff1c09e3135576"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_linux_amd64.tar.gz"
+checksum = "sha256:d449ba85ab85a0769989d78f8b9872938e4ba9347f7f4f925f73d98272a0a655"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_linux_amd64.tar.gz"
 
 [tools.task."platforms.macos-arm64"]
-checksum = "sha256:0f556b66df69d53b790c7fd26bfab73543b4a5ce1767df6b2e8499619e2a205b"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_darwin_arm64.tar.gz"
+checksum = "sha256:838b7954f227b5e8f798ad83111195aed810cf4f98dfabef4aa77ea065dd74b0"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_darwin_arm64.tar.gz"
 
 [tools.task."platforms.macos-x64"]
-checksum = "sha256:8bc4dd3baed1c71956ade0bb0a9c1b94e3ed7b65e7f2ff3aab13d0562c820e59"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_darwin_amd64.tar.gz"
+checksum = "sha256:da3ba003ec049fb8be1ff798132c951dcd08a60efbdc2d1e918bf2095cd4a39c"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_darwin_amd64.tar.gz"
 
 [tools.task."platforms.windows-x64"]
-checksum = "sha256:725c551f699d4d6c0dc57bd8148f72bef8d5b2fb650d9c985f271a61522fd521"
-url = "https://github.com/go-task/task/releases/download/v3.49.1/task_windows_amd64.zip"
+checksum = "sha256:82c20fbd19ac62073b8ecf89e026fbd209f702a2922106e4ff2ed6934d193038"
+url = "https://github.com/go-task/task/releases/download/v3.50.0/task_windows_amd64.zip"
 
 [[tools.typos]]
-version = "1.45.0"
+version = "1.45.1"
 backend = "aqua:crate-ci/typos"
 
 [tools.typos."platforms.linux-arm64"]
-checksum = "sha256:dde3b5c5bd5d0ab6ff76a1465658dc6485e7d420cf8eccfdfbdea37809bed793"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:0d3688c607a49ffb6dedaca6de44e4217abeaa5b93228d673dc5caf76f60489f"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.linux-arm64-musl"]
-checksum = "sha256:dde3b5c5bd5d0ab6ff76a1465658dc6485e7d420cf8eccfdfbdea37809bed793"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:0d3688c607a49ffb6dedaca6de44e4217abeaa5b93228d673dc5caf76f60489f"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.linux-x64"]
-checksum = "sha256:fa10c3c77c61bdf03f2f6f8245eb6fb89d92115450272a4eabe326b3967ac375"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:33447531a0eff29796d6fb9b555b4628723db72c6bad129e168d97ac86ceb0f1"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.linux-x64-musl"]
-checksum = "sha256:fa10c3c77c61bdf03f2f6f8245eb6fb89d92115450272a4eabe326b3967ac375"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:33447531a0eff29796d6fb9b555b4628723db72c6bad129e168d97ac86ceb0f1"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.macos-arm64"]
-checksum = "sha256:c42f8d8af49bff559f0bf0a45d1fb704f9e13446cc8faebfb30a3f669b89c802"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:2c31ed16286f26c08ae477faf001af8542ff23aeb6e7323be5f620710c192fb5"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-aarch64-apple-darwin.tar.gz"
 
 [tools.typos."platforms.macos-x64"]
-checksum = "sha256:4a4c1060b248c13ce7bc6c1ffe5cb75120885e8ecb62e7ba2b40f5567680f9ba"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:70767b5d8d920cbb17b452a6b068e36e1b3fd649089bce883d3512eb85990326"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-x86_64-apple-darwin.tar.gz"
 
 [tools.typos."platforms.windows-x64"]
-checksum = "sha256:dc89f5f175ee1a389e1f5cc5173353d9db3751e2cddedf34339d8ec45cd38aa0"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.0/typos-v1.45.0-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:a4ae081cb7a403f2b75e8c066aa4a4484207547c4e9eb2b4df3f68ecdbc5dd3e"
+url = "https://github.com/crate-ci/typos/releases/download/v1.45.1/typos-v1.45.1-x86_64-pc-windows-msvc.zip"
 
 [[tools.uv]]
 version = "0.11.6"
