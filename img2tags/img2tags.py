@@ -48,7 +48,7 @@ class ImageLoadingPrepDataset(torch.utils.data.Dataset):
                 image=image,
                 image_size=self.image_size,
             )
-            tensor = torch.tensor(image)
+            tensor = torch.Tensor(image)
         except Exception as e:
             logger.warning(f"Load error: {img_path}, error: {e}")
             return (None, img_path)
