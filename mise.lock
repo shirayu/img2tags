@@ -65,74 +65,74 @@ checksum = "sha256:cc5149eabd53779ce1e7bdc5401643622d0c7e6800ade18928a767e940bb0
 url = "https://nodejs.org/dist/v24.15.0/node-v24.15.0-win-x64.zip"
 
 [[tools.pnpm]]
-version = "11.0.0"
+version = "11.0.4"
 backend = "aqua:pnpm/pnpm"
 
 [tools.pnpm."platforms.linux-arm64"]
-checksum = "sha256:1e6d87ebfd7ff169966ff5b3ad71b780b883c68d3e59987df1096dfd8853df75"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-linux-arm64.tar.gz"
+checksum = "sha256:77ab05d5db4aec5bf9448a78f8dc60f0c67dca5104412aa192609fb8c1f7204f"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-arm64.tar.gz"
 
 [tools.pnpm."platforms.linux-arm64-musl"]
-checksum = "sha256:ebd648694f2b7fd675350f0ce1e26b0e7c7165a7f27f2b01616d5bbe9b7d7534"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-linux-arm64-musl.tar.gz"
+checksum = "sha256:4da815463a92e043b6a2ad928442ac0122a60e5127d6c9658dd79aceee6b5fef"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-arm64-musl.tar.gz"
 
 [tools.pnpm."platforms.linux-x64"]
-checksum = "sha256:9b44acc77ada40fc41b665fde1d57367a5ebec31bd4b1b00598daed195da3e17"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-linux-x64.tar.gz"
+checksum = "sha256:af148fa26d8bfc3b3e2bda40d96c79f0d449364cc7cc4530bfbb2fb2a23d983f"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-x64.tar.gz"
 
 [tools.pnpm."platforms.linux-x64-musl"]
-checksum = "sha256:b145fa7bb90f2082e8d57ec9b220c34b49c7c35dc65ff4b122c3094356848023"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-linux-x64-musl.tar.gz"
+checksum = "sha256:920c534067af813f638f4724e38c63fee411d71f5b43ba417c17e35598a94a68"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-linux-x64-musl.tar.gz"
 
 [tools.pnpm."platforms.macos-arm64"]
-checksum = "sha256:3620a0fcaf81ecd3aaeccd5965919d90dbc913f4d07a96e11e7cafc2c785054b"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-darwin-arm64.tar.gz"
+checksum = "sha256:e3114eaa5c5ac6bd80e6245781200486e4f2c0a938f382048dc026b5ba113ddc"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-darwin-arm64.tar.gz"
 
 [tools.pnpm."platforms.macos-x64"]
-checksum = "sha256:1701748b75187f1333a9c616827943ff84ff46cc42becc156ff6864b9bd0f948"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-darwin-x64.tar.gz"
+checksum = "sha256:9bc026288b81982fb89fd565e13a2c2a3cc4bc9d669354d03450527f0a4b365d"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-darwin-x64.tar.gz"
 
 [tools.pnpm."platforms.windows-x64"]
-checksum = "sha256:581e222e622cd0cc4f0ac5f85dd0db76b65117e3b17507979d89e63fdc68edca"
-url = "https://github.com/pnpm/pnpm/releases/download/v11.0.0/pnpm-win32-x64.zip"
+checksum = "sha256:9dacdc858b58a069112eb02e78947e45727bd61fdfb8c77fcc8c08d922de180a"
+url = "https://github.com/pnpm/pnpm/releases/download/v11.0.4/pnpm-win32-x64.zip"
 
 [[tools.python]]
-version = "3.13.12"
+version = "3.14.4"
 backend = "core:python"
 
 [tools.python."platforms.linux-arm64"]
-checksum = "sha256:8abd16da242b56902a13ba1d6e3aaa0d6d19dfc71547f04e437f707fde179915"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:b8b597fdb2f8dccdc502c11947b60a4b65eb6bce79cfa60c7ccf9b6e8352c60a"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.linux-arm64-musl"]
-checksum = "sha256:b12458857fc2ebde36c35626e5e297dd6a9496dcaa36bd9ad4c45973e367d11d"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-aarch64-unknown-linux-musl-install_only_stripped.tar.gz"
+checksum = "sha256:a10687b226e0941632569836bc1d8fa6353a8e3e8424316467ca9cdf220b983d"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-aarch64-unknown-linux-musl-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.linux-x64"]
-checksum = "sha256:91c8920a197c3f7c562612eb4537e18e0c52c1c918bb39912cbd0b1b3c154229"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:fe9a9c32d13870af632cbac3dfc7528ae53597e94472aa4c7d6a42e8166136cd"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.linux-x64-musl"]
-checksum = "sha256:e50dfa03c06caf81d8708a708dd19fd2493d1eb5563314b83c81989ecbe9bfc6"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-x86_64-unknown-linux-musl-install_only_stripped.tar.gz"
+checksum = "sha256:d6005226cd24e780630626232c7a63243d4885fdf975dcf930a0758a0759ce14"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-x86_64-unknown-linux-musl-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.macos-arm64"]
-checksum = "sha256:3de7059c87c0e7604e3e9397a547020c161f65c8d51d358e230d3a7d3a456aaa"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-aarch64-apple-darwin-install_only_stripped.tar.gz"
+checksum = "sha256:6f304f4ec30854611f23316578302235fb517cd970519ecdd11a8c4db87fd843"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-aarch64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.macos-x64"]
-checksum = "sha256:7fd6a6162ef82c9df74eb1c71dad042a05960869789915b1203d61f14d3dc629"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-x86_64-apple-darwin-install_only_stripped.tar.gz"
+checksum = "sha256:d51250a32fa5d9f0799c7bcb71720c27b10a3afd4a7de288120f96085d508a5a"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-x86_64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.windows-x64"]
-checksum = "sha256:b11194bd12122df60e24b08a71a4e5aaa1d15c2cf436f7f4f57bbea4f9a80462"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
+checksum = "sha256:a976991dcd085c1bb5d9a8084823a6bc8b7f9b079d8c432574a6ddd68c3a6fe1"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260414/cpython-3.14.4+20260414-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [[tools.task]]
@@ -168,36 +168,36 @@ checksum = "sha256:82c20fbd19ac62073b8ecf89e026fbd209f702a2922106e4ff2ed6934d193
 url = "https://github.com/go-task/task/releases/download/v3.50.0/task_windows_amd64.zip"
 
 [[tools.typos]]
-version = "1.45.2"
+version = "1.46.0"
 backend = "aqua:crate-ci/typos"
 
 [tools.typos."platforms.linux-arm64"]
-checksum = "sha256:838aad0c2a22ef4d8b4195fc288e6d7d94ba54871adc6414caa8199780ae1ef5"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:1f8324d5b17c7354c4a83865007efb55c8278ef4cc22bed748df6b92ca439384"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.linux-arm64-musl"]
-checksum = "sha256:838aad0c2a22ef4d8b4195fc288e6d7d94ba54871adc6414caa8199780ae1ef5"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:1f8324d5b17c7354c4a83865007efb55c8278ef4cc22bed748df6b92ca439384"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.linux-x64"]
-checksum = "sha256:8463790818b926ef97bd03633ba8943549040d7defd3951e8518903f01d360a8"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:c62a626df385c96574743fd4974aeb271a41a67d080a0398e36e1a42782f614a"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.linux-x64-musl"]
-checksum = "sha256:8463790818b926ef97bd03633ba8943549040d7defd3951e8518903f01d360a8"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:c62a626df385c96574743fd4974aeb271a41a67d080a0398e36e1a42782f614a"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.typos."platforms.macos-arm64"]
-checksum = "sha256:65f3f46b03383992aa96d07a88e7859ed21fd3e3314691c65079e39461c2b38e"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:322f90609f951bc27e204cf8d0370702510ae99e87285b217916fb2c09d76111"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-aarch64-apple-darwin.tar.gz"
 
 [tools.typos."platforms.macos-x64"]
-checksum = "sha256:3ff87158bdcbc4e0886a0ed291f372cc31cd2ff489d0541cea4c3c251f4f4ad5"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:ca0bba6c8a80b4981951dbc3519987d51ef3a60e0b0a462db005ad99de47b40d"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-x86_64-apple-darwin.tar.gz"
 
 [tools.typos."platforms.windows-x64"]
-checksum = "sha256:c0a53545ffcc5a0d698af4dead167184b0e8c20fd06013fd58dddceadc901689"
-url = "https://github.com/crate-ci/typos/releases/download/v1.45.2/typos-v1.45.2-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:a95e17043bdc0b890936e0213f7a533f4ccdf5430bb7c4a26984de8c77238536"
+url = "https://github.com/crate-ci/typos/releases/download/v1.46.0/typos-v1.46.0-x86_64-pc-windows-msvc.zip"
 
 [[tools.uv]]
 version = "0.11.8"
