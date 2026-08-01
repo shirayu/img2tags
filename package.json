@@ -4,7 +4,7 @@
   "devDependencies": {
     "@taplo/cli": "^0.7.0",
     "markdownlint-cli2": "^0.23.2",
-    "npm-run-all2": "^9.0.2",
+    "npm-run-all2": "^9.0.3",
     "pyright": "^1.1.411"
   },
   "engines": {
