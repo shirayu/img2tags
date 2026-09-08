@@ -1,6 +1,7 @@
 [tools]
 node = "lts"
 pnpm = "latest"
+taplo = "latest"
 python = "3.14.5"
 typos = "latest"
 uv = "latest"

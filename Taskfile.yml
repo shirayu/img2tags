@@ -11,13 +11,32 @@ tasks:
     deps: [lint, test]
 
   format:
+    deps: [format_python, format_md, format_toml]
+
+  format_python:
     cmds:
       - ruff format --respect-gitignore
       - ruff check --fix
-      - pnpm format
+
+  format_md:
+    cmds:
+      - pnpm exec markdownlint-cli2 --fix
+
+  format_toml:
+    cmds:
+      - taplo format *.toml
 
   lint:
-    deps: [lint_yaml, lint_ruff_format, lint_ruff_check, lint_pnpm, lint_typos]
+    deps:
+      [
+        lint_yaml,
+        lint_ruff_format,
+        lint_ruff_check,
+        lint_md,
+        lint_pyright,
+        lint_toml,
+        lint_typos,
+      ]
 
   lint_yaml:
     cmds:
@@ -34,9 +53,17 @@ tasks:
     cmds:
       - ruff check --respect-gitignore
 
-  lint_pnpm:
+  lint_md:
     cmds:
-      - pnpm lint
+      - pnpm exec markdownlint-cli2
+
+  lint_pyright:
+    cmds:
+      - pnpm exec pyright
+
+  lint_toml:
+    cmds:
+      - taplo format --check *.toml
 
   lint_typos:
     cmds:
@@ -44,4 +71,4 @@ tasks:
 
   test:
     cmds:
-      - pnpm test
+      - ':'
