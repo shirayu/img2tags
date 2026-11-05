@@ -2,7 +2,7 @@
 node = "lts"
 pnpm = "latest"
 taplo = "latest"
-python = "3.14.9"
+python = "3.14.10"
 typos = "latest"
 uv = "latest"
 task = "latest"
